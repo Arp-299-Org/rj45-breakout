@@ -1,0 +1,21 @@
+{
+  "schema": "board-graph/board-render/v2",
+  "models": {
+    "${KIPRJMOD}/models/Heling_MJ56881-B011-HLRN1-C.step": "31681193ca2051e0425524304a944c0a966d57e4d605c96af0c33169d8b50fbe",
+    "${KIPRJMOD}/models/Hanxia_HX_PZ2.54-1x8P_TP-ZQ.step": "a1fc91b83a419fbd56290fe846045fe15720dbde7678c7e9c8e3c5ddf25c4f81"
+  },
+  "board_sha256": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+  "images": {
+    "3d_bottom.png": "a4500e3a7029e2e8a65169c03916ec13f2bd04d37e24b3e289cab9c0c3be4c66",
+    "3d_top.png": "4db13a36c462b98751b0a24d5acad218b9d5174b49dccd674e20cb3a1bc97843",
+    "all_copper_stack.png": "fe9b8986ee6f0526fedebaddd2cc129247c2199991fc9a27abcb1ce2c56d12c9",
+    "back_copper.png": "bc1dde9ccb2ecbf2df848351493c7af76e74959afff93708f160c28acf7c5d03",
+    "back_copper_only.png": "093e9b39be562d429c37c8fc4281e09324584c4537a082936aa21087c8ae7012",
+    "back_no_pour.png": "093e9b39be562d429c37c8fc4281e09324584c4537a082936aa21087c8ae7012",
+    "back_silk_and_mask.png": "bc1dde9ccb2ecbf2df848351493c7af76e74959afff93708f160c28acf7c5d03",
+    "front_copper.png": "5778c4773a5494a7697a102af83318a0e364db2f963954b2e1a750b84939ad0e",
+    "front_copper_only.png": "fe9b8986ee6f0526fedebaddd2cc129247c2199991fc9a27abcb1ce2c56d12c9",
+    "front_no_pour.png": "391b69def73ae0cd942a71d62b05dfffee340e428eb214cd03764eae44ef6d3d",
+    "front_silk_and_mask.png": "41fb1c132f048b9ca578c7cd3a83c02460f4a5af618781316612b34f74a5e6f3"
+  }
+}

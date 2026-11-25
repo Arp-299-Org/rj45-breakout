@@ -1,0 +1,222 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-25T12:59:03",
+    "ignored_checks": [
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "key": "pth_inside_courtyard"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "key": "npth_inside_courtyard"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [],
+    "source": "rj45_breakout.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [/RJ45_1] of J2 on F.Cu",
+                    "pos": {
+                        "x": 9.11,
+                        "y": 26.6
+                    },
+                    "uuid": "854c1cc2-c4c2-4445-9854-fb5bfca095bd"
+                },
+                {
+                    "description": "Pad 1 [/RJ45_1] of J1 on F.Cu",
+                    "pos": {
+                        "x": 14.43,
+                        "y": 13.25
+                    },
+                    "uuid": "379b700b-21f3-4070-aa61-4fb850996f94"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/RJ45_2] of J2 on F.Cu",
+                    "pos": {
+                        "x": 11.65,
+                        "y": 23.4
+                    },
+                    "uuid": "6c285009-a4cf-4fe0-97ed-f3014b41f70b"
+                },
+                {
+                    "description": "Pad 2 [/RJ45_2] of J1 on F.Cu",
+                    "pos": {
+                        "x": 15.45,
+                        "y": 13.25
+                    },
+                    "uuid": "251a6d7a-e29b-4e3a-bd03-304c4e21cd3b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 3 [/RJ45_3] of J2 on F.Cu",
+                    "pos": {
+                        "x": 14.19,
+                        "y": 26.6
+                    },
+                    "uuid": "52833728-26f2-45d6-b38e-fe2d2d4daa91"
+                },
+                {
+                    "description": "Pad 3 [/RJ45_3] of J1 on F.Cu",
+                    "pos": {
+                        "x": 16.47,
+                        "y": 13.25
+                    },
+                    "uuid": "56b8b044-9155-41a8-a5ca-a306f8068bf0"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [/RJ45_4] of J2 on F.Cu",
+                    "pos": {
+                        "x": 16.73,
+                        "y": 23.4
+                    },
+                    "uuid": "8d296297-6a0a-4321-8cdf-a9813969a558"
+                },
+                {
+                    "description": "Pad 4 [/RJ45_4] of J1 on F.Cu",
+                    "pos": {
+                        "x": 17.49,
+                        "y": 13.25
+                    },
+                    "uuid": "c0068ddd-01a3-4046-834c-42f74b5b0eb2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 5 [/RJ45_5] of J1 on F.Cu",
+                    "pos": {
+                        "x": 18.51,
+                        "y": 13.25
+                    },
+                    "uuid": "e63b31be-bb2a-4dd9-a0c9-f1e568fb0fc7"
+                },
+                {
+                    "description": "Pad 5 [/RJ45_5] of J2 on F.Cu",
+                    "pos": {
+                        "x": 19.27,
+                        "y": 26.6
+                    },
+                    "uuid": "d0a669b3-d2f0-454e-b145-34fa746e6219"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 6 [/RJ45_6] of J1 on F.Cu",
+                    "pos": {
+                        "x": 19.53,
+                        "y": 13.25
+                    },
+                    "uuid": "39118c7d-b883-4c9d-a6c9-935276b3518f"
+                },
+                {
+                    "description": "Pad 6 [/RJ45_6] of J2 on F.Cu",
+                    "pos": {
+                        "x": 21.81,
+                        "y": 23.4
+                    },
+                    "uuid": "b4a1d27f-08c8-4779-adf7-813efc7a9961"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 7 [/RJ45_7] of J1 on F.Cu",
+                    "pos": {
+                        "x": 20.55,
+                        "y": 13.25
+                    },
+                    "uuid": "5b199ddf-1932-4402-a520-200e2c220236"
+                },
+                {
+                    "description": "Pad 7 [/RJ45_7] of J2 on F.Cu",
+                    "pos": {
+                        "x": 24.35,
+                        "y": 26.6
+                    },
+                    "uuid": "c9f96524-c2d2-436d-ae0c-cbdd899fb2cc"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 8 [/RJ45_8] of J1 on F.Cu",
+                    "pos": {
+                        "x": 21.57,
+                        "y": 13.25
+                    },
+                    "uuid": "e8f5384b-cf92-4af1-bf94-18497890f8a6"
+                },
+                {
+                    "description": "Pad 8 [/RJ45_8] of J2 on F.Cu",
+                    "pos": {
+                        "x": 26.89,
+                        "y": 23.4
+                    },
+                    "uuid": "c05acde4-408b-4058-8f9a-7d6bcbcb6a87"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": []
+}

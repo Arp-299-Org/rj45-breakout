@@ -1,0 +1,22 @@
+{
+  "actor": "script:baseline",
+  "at": "2026-11-25T19:41:53.959868+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/inventory/baseline.json",
+      "sha256": "8badf523a8f931bd1509126548bec7763059a5e08e24ac888701f477435061bd"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 0,
+    "workflow_parent": {
+      "name": null,
+      "scope": "track"
+    }
+  },
+  "node": "inventory",
+  "note": "no findings; schematic stage: there is no board file yet; not there yet: board/rj45_breakout.kicad_pcb (the board, which the first update from the schematic makes); board/rj45_breakout.kicad_dru (the board's rules file); board/exports/rj45_breakout-bom.csv (the exported BOM, which the first BOM export from the schematic writes). The cards that read them refuse until they are there",
+  "outcome": "pass",
+  "target": "decisions",
+  "track": "board"
+}

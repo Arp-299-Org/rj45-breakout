@@ -1,0 +1,57 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:40:44.160806+00:00",
+  "evidence": [
+    {
+      "path": "board/rj45_breakout.kicad_sch",
+      "sha256": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718"
+    },
+    {
+      "path": "board/reports/schematic/erc.json",
+      "sha256": "d93e11b5e160e15f0ce9ced747b1c27880b69d52f1254f5edcd3c91d1b56f70b"
+    },
+    {
+      "path": "board/reports/schematic/drc-parity.json",
+      "sha256": "8f5e38cc4c5a7596b8143c80558acfce39748edefd969351e1209d626d41bf22"
+    },
+    {
+      "path": "board/reports/schematic/render/sch.png",
+      "sha256": "5de9d3e4170d8ff25b2ecc88c554085de37a95d2f038bfff736bddf69dd8e458"
+    },
+    {
+      "path": "board/reports/schematic/render/crop_main.png",
+      "sha256": "0412c174ecf0e2173b49c354be4c6f1b4e446097384f33f7d39dc18adea7d4e9"
+    },
+    {
+      "path": "board/exports/rj45_breakout-bom.csv",
+      "sha256": "f4091d2ff38ffe4a438c134298ec93f1f422c4b35b84a79730887f50e4b5501a"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 25,
+    "approval_v1": {
+      "card terms": "0d744c29bc147ceaf57e70e111615ef4c5f3f04dd7d7da971fa1231c423695da",
+      "file:.agents/skills/kicad-10-operator/SKILL.md": "58dfc8ba96237ff5faaee73bc96e2273bdf20b3f000d0cea63b94aba20768040",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "file:docs/SCHEMATIC_REVIEW.md": "b2dc87d5d7b46375298cf24b6cc4a387966b8c3198dd170641017dd6570492a6",
+      "review:constraints": "2026-11-25T21:13:25.292311+00:00"
+    },
+    "attempt_id": "a17413374ba2405b9e46dce20ed13219",
+    "board/rj45_breakout.kicad_dru": "1a589c3c3907947bc2016ba0aa7ec9081c6e875b4144cad67b809efabad94768",
+    "board/rj45_breakout.kicad_pro": "a2d6f0cf5fbeaf8bf9dc29c9113465e94e1e042adcde4e826b5e6695d16a5d90",
+    "board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "board/rj45_breakout.kicad_sym": "9a145d34500c537eb63421ef853bfd2c0bf144e85fd0ac0f81314cebbe6d9250",
+    "board/sym-lib-table": "f2ad9c82391520dd59aae7e17d3e6eb2e29b1c7df97cda4c526875abd778a41d",
+    "workflow_parent": {
+      "name": "2026-11-25T21-40-26.128251+00-00-routing_batch-returned.json",
+      "scope": "track"
+    }
+  },
+  "node": "schematic",
+  "note": "ERC 0 errors and 0 warnings on current schematic; prior schematic critic review and rendered views remain current.",
+  "outcome": "pass",
+  "target": "bom",
+  "track": "board"
+}

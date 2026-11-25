@@ -1,0 +1,39 @@
+{
+  "schema": "board-graph/independent-review/v1",
+  "board_sha256": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+  "schematic_sha256": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+  "builder": "agent:gemini",
+  "reviewer": "agent:independent-verification-reviewer",
+  "checks": [
+    {
+      "name": "ERC (G1)",
+      "passed": true,
+      "observation": "Fresh kicad-cli 10.0.8 ERC on board/rj45_breakout.kicad_sch exited 0 with 0 errors, 0 warnings, and 0 exclusions.",
+      "evidence": "board/reports/verification/checks/erc.json"
+    },
+    {
+      "name": "DRC with schematic parity and zone refill (G2)",
+      "passed": true,
+      "observation": "Fresh kicad-cli 10.0.8 DRC on board/rj45_breakout.kicad_pcb exited 0 with 0 violations, 0 schematic parity errors, 0 unconnected items, 0 lib_footprint_mismatch, and empty accepted_warning_refs.",
+      "evidence": "board/reports/verification/checks/drc.json"
+    },
+    {
+      "name": "Route quality and geometry (G3)",
+      "passed": true,
+      "observation": "Reproduced 24 F.Cu 0.25 mm segments, 0 vias, centered 90 deg pad exits, 135 deg bends, min segment-to-segment 0.4712 mm, min copper-to-edge 3.0500 mm, min copper-to-NPTH 1.4828 mm.",
+      "evidence": "board/reports/verification/checks/route-quality.json"
+    },
+    {
+      "name": "Pad mask apertures and manual joints (G5)",
+      "passed": true,
+      "observation": "All J1 (8 signal + 2 anchor) and J2 (8 signal) SMD pads have F.Cu/F.Mask/F.Paste apertures; 0 covered pads and 0 hand-soldered joints.",
+      "evidence": "board/reports/verification/checks/pad-mask.json"
+    },
+    {
+      "name": "Independent full reproduction and BOM/LCSC identity",
+      "passed": true,
+      "observation": "Verified outline 36.000 x 35.000 mm (1.5 mm fillets), pad parity across libraries, continuous /RJ45_1../RJ45_8 paths, and identical J1 (C501473) / J2 (C42453975) metadata across schematic, PCB, BOM CSV, and parts.json.",
+      "evidence": "board/reports/verification/reproduced.md"
+    }
+  ]
+}

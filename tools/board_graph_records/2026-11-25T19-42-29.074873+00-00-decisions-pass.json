@@ -1,0 +1,40 @@
+{
+  "actor": "owner",
+  "at": "2026-11-25T19:42:29.074873+00:00",
+  "evidence": [
+    {
+      "path": "board/DECISIONS.md",
+      "sha256": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514"
+    },
+    {
+      "path": "docs/PRODUCT_TRUTH.md",
+      "sha256": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 1,
+    "approval_v1": {
+      "card terms": "41a6f8d488e0f348be41067886c8451a4d57406e9c1f061c719932146f894833",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "owned:board/DECISIONS.md": {
+        "sha256": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514"
+      },
+      "owned:docs/PRODUCT_TRUTH.md": {
+        "sha256": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe"
+      }
+    },
+    "attempt_id": "4430868af9114cfdb284881116476148",
+    "board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+    "docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+    "workflow_parent": {
+      "name": "2026-11-25T19-41-53.959868+00-00-inventory-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "decisions",
+  "note": "Adopted turnkey JLCPCB Economic SMT design: right-angle unshielded 8P8C SMT jack with mechanical retention, 1x8 2.54 mm SMT vertical male header, 4x M3 mounting holes, and pin 1-8 + T568B silkscreen.",
+  "outcome": "pass",
+  "target": "constraints",
+  "track": "board"
+}

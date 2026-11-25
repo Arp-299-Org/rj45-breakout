@@ -1,0 +1,35 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T19:53:56.421417+00:00",
+  "evidence": [
+    {
+      "path": "board/ELECTRICAL_AUDIT_CONTRACT.md",
+      "sha256": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 2,
+    "approval_v1": {
+      "card terms": "288c3a767000286b7da2af6871a21c44915532cc085a0b840580f081593d52be",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:board/ELECTRICAL_AUDIT_CONTRACT.md": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e",
+      "file:board/SPACE.md": "19482ebf74d476e7ce67b7fbcd00a623f17639d46aeef872c9c46e9616a397f5",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "owned:board/ELECTRICAL_AUDIT_CONTRACT.md": {
+        "sha256": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e"
+      },
+      "review:decisions": "2026-11-25T19:42:29.074873+00:00"
+    },
+    "attempt_id": "880e7f5409814c538d5e9dd3225c0055",
+    "board/ELECTRICAL_AUDIT_CONTRACT.md": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e",
+    "workflow_parent": {
+      "name": "2026-11-25T19-42-29.074873+00-00-decisions-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "constraints",
+  "note": "Electrical audit contract current for passive 8-net RJ45 breakout (0.25 mm traces, 0.20 mm clearance, F.Cu planar, Mode: ipc first batch).",
+  "outcome": "pass",
+  "target": "schematic",
+  "track": "board"
+}

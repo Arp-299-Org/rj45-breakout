@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "rj45_breakout")(type "KiCad")(uri "${KIPRJMOD}/rj45_breakout.kicad_sym")(options "")(descr "Project schematic symbols"))
+)

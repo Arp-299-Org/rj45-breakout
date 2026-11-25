@@ -1,0 +1,34 @@
+{
+  "action": "erc",
+  "detail": {
+    "erc_command": "kicad-cli sch erc --format json --severity-all",
+    "kicad_version": "10.0.8",
+    "scope": "KiCad's electrical rules check of the saved schematic only; not the schematic critic's findings and not how the pages read.",
+    "violations": 0
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T21:40:41.073558+00:00",
+  "inputs": {
+    "approval_contract": {
+      "file:.agents/skills/kicad-10-operator/SKILL.md": "58dfc8ba96237ff5faaee73bc96e2273bdf20b3f000d0cea63b94aba20768040",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "file:docs/SCHEMATIC_REVIEW.md": "b2dc87d5d7b46375298cf24b6cc4a387966b8c3198dd170641017dd6570492a6",
+      "requires": {
+        "constraints": "2026-11-25T21:13:25.292311+00:00"
+      },
+      "terms": "0d744c29bc147ceaf57e70e111615ef4c5f3f04dd7d7da971fa1231c423695da"
+    },
+    "approval_history_seq": 25,
+    "board/rj45_breakout.kicad_dru": "1a589c3c3907947bc2016ba0aa7ec9081c6e875b4144cad67b809efabad94768",
+    "board/rj45_breakout.kicad_pro": "a2d6f0cf5fbeaf8bf9dc29c9113465e94e1e042adcde4e826b5e6695d16a5d90",
+    "board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "board/rj45_breakout.kicad_sym": "9a145d34500c537eb63421ef853bfd2c0bf144e85fd0ac0f81314cebbe6d9250",
+    "board/sym-lib-table": "f2ad9c82391520dd59aae7e17d3e6eb2e29b1c7df97cda4c526875abd778a41d",
+    "tools/board_graph_tool.json": "078c7019ff6f5143d88289e3220e69e7e35b318ae6323350963536ab89d3f480"
+  },
+  "node": "schematic",
+  "outcome": "pass",
+  "run_id": "7d03c387da304ff391c435197174b7ec",
+  "started_at": "2026-11-25T21:40:38.421571+00:00"
+}

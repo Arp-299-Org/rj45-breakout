@@ -1,0 +1,22 @@
+{
+  "parts": {
+    "MJ56881-B011-HLRN1-C": {
+      "manufacturer": "Heling",
+      "supplier": "LCSC",
+      "supplier_part": "C501473",
+      "datasheet": "Heling_MJ56881-B011-HLRN1-C_C501473.pdf",
+      "package": "SMD Right Angle 8P8C Unshielded",
+      "height_mm": 12.5,
+      "height_source": "Heling_MJ56881-B011-HLRN1-C_C501473.pdf page 1 side view (12.50 mm above PCB mount face)"
+    },
+    "HX PZ2.54-1x8P TP-ZQ": {
+      "manufacturer": "hanxia",
+      "supplier": "LCSC",
+      "supplier_part": "C42453975",
+      "datasheet": "Hanxia_HX_PZ2.54-1x8P_TP-ZQ_C42453975.pdf",
+      "package": "SMD,P=2.54mm(Staggered pins) Type B",
+      "height_mm": 9.2,
+      "height_source": "Hanxia_HX_PZ2.54-1x8P_TP-ZQ_C42453975.pdf page 1 side view (3.20 mm insulator top + 6.00 mm pin = 9.20 mm above PCB)"
+    }
+  }
+}

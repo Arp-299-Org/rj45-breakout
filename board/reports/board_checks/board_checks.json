@@ -1,0 +1,116 @@
+{
+  "action": "board_checks",
+  "checked_scope": {
+    "card terms": "3bf64707925703774c4348f0d33fa3f7e8fca43f5fc75777fa31bd029cc48c76",
+    "file:board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "file:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+    "review:routing_batch": "2026-11-25T21:42:47.117556+00:00"
+  },
+  "detail": {
+    "checks": [
+      {
+        "check": "Schematic rules check, ERC (G1)",
+        "detail": "0 errors, 0 warnings",
+        "ok": true,
+        "report": "erc.json"
+      },
+      {
+        "check": "KiCad version",
+        "detail": "KiCad 10.0.8 (the preflight enforces the minimum)",
+        "ok": true,
+        "report": null
+      },
+      {
+        "check": "Board rules check, DRC (G2), zones refilled",
+        "detail": "0 copper violations, 0 mismatches, 0 library warnings",
+        "ok": true,
+        "open": 0,
+        "report": "drc.json"
+      },
+      {
+        "check": "Saved zone fills current",
+        "detail": "all 0 zones match a fresh refill",
+        "ok": true,
+        "report": "drc-refilled-copy.json"
+      },
+      {
+        "check": "Route quality (G3)",
+        "detail": "0 errors, 0 warnings (24 tracks, 0 vias)",
+        "ok": true,
+        "report": "route-quality.json"
+      },
+      {
+        "check": "Electrical audit (G4)",
+        "detail": "skipped: this board's description names no electrical audit",
+        "ok": true,
+        "report": null
+      },
+      {
+        "check": "Hand-solder pads have mask openings (G5)",
+        "detail": "0 covered pads",
+        "ok": true,
+        "report": "pad-mask.json"
+      },
+      {
+        "check": "Through-hole pads join planes by thermal spokes",
+        "detail": "0 of 0 through-hole pads on a plane joined solid",
+        "ok": true,
+        "report": "thermal-relief.json"
+      },
+      {
+        "check": "Hand-soldered joints: pins fit, lands open, no solid plane",
+        "detail": "0 joint kinds: 0 do not fit, 0 without mask, 0 solid; 0 not proven; 0 as the maker draws it, 0 not fitted",
+        "ok": true,
+        "report": "manual-joints.json"
+      },
+      {
+        "check": "Full board audit (G6)",
+        "detail": "skipped: this board's description names no full board audit",
+        "ok": true,
+        "report": null
+      },
+      {
+        "check": "Routing progress",
+        "detail": "none open",
+        "ok": true,
+        "report": null
+      }
+    ],
+    "commit": "374e9424ce98e0a9b3ac3928108b3640195176e0",
+    "open": 0,
+    "pass": true,
+    "run": {
+      "at": "2026-11-25T21:43:00.994203+00:00",
+      "event": "local",
+      "id": "local-20261125T214300Z"
+    },
+    "scope": "The board checks on this commit as a validate run kept them on the graph: scripts/validate_board.py as the KiCad machine ran it (a workflow on its runner, or scripts/run_board_checks.py there), not run here."
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T21:43:10.416493+00:00",
+  "inputs": {
+    ".github/workflows/validate.yml": null,
+    "approval_contract": {
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "input:board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+      "input:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+      "requires": {
+        "routing_batch": "2026-11-25T21:42:47.117556+00:00"
+      },
+      "terms": "3bf64707925703774c4348f0d33fa3f7e8fca43f5fc75777fa31bd029cc48c76"
+    },
+    "approval_history_seq": 33,
+    "board/exports/rj45_breakout-bom.csv": "f4091d2ff38ffe4a438c134298ec93f1f422c4b35b84a79730887f50e4b5501a",
+    "board/rj45_breakout.kicad_dru": "1a589c3c3907947bc2016ba0aa7ec9081c6e875b4144cad67b809efabad94768",
+    "board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "board/rj45_breakout.kicad_pro": "a2d6f0cf5fbeaf8bf9dc29c9113465e94e1e042adcde4e826b5e6695d16a5d90",
+    "board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "scripts/validate_board.py": "477859c7cfffcafa36fcd451a5f878a8f722f8ecdf05c2724cd694718b728a85",
+    "tools/board_graph_tool.json": "1774c25b578cd90a835f8b6fe7b81a6f701bbd3650d6beec95323fa9a929fee1"
+  },
+  "node": "board_checks",
+  "outcome": "pass",
+  "run_id": "e28c29da953a4582b92574165ffcb207",
+  "started_at": "2026-11-25T21:43:09.419499+00:00"
+}

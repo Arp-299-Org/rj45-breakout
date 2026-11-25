@@ -1,0 +1,32 @@
+{
+  "action": "supply_receipt",
+  "detail": {
+    "factory_parts": 2,
+    "factory_placements": 2,
+    "listings": "board/reports/stock/listings.json",
+    "notes": [],
+    "oldest_allowed_days": 30,
+    "planning_quantity": 5,
+    "scope": "The listings file against the saved board: that each factory part has a dated listing with stock and price. The script reads no catalog; whoever is on the card reads the supplier and writes the file."
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T21:41:09.339463+00:00",
+  "inputs": {
+    "approval_contract": {
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "requires": {
+        "bom": "2026-11-25T21:40:56.741654+00:00"
+      },
+      "terms": "01ad04399f45a5d1bc77ca3a8a7db8fd9b144c7e6eb50525627319c541d9b38e"
+    },
+    "approval_history_seq": 27,
+    "board/reports/stock/listings.json": "ae4eea23eb7d6959bfb4ebaec1e04d35ebcebc5c9be8ba1696127512aa3e8226",
+    "board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "tools/board_graph_tool.json": "078c7019ff6f5143d88289e3220e69e7e35b318ae6323350963536ab89d3f480"
+  },
+  "node": "stock",
+  "outcome": "pass",
+  "run_id": "e04ddd40003a48778554089193266251",
+  "started_at": "2026-11-25T21:41:08.937693+00:00"
+}

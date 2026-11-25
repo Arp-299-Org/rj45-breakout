@@ -1,0 +1,29 @@
+{
+  "actor": "script:board_checks",
+  "at": "2026-11-25T21:43:10.904707+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/board_checks/board_checks.json",
+      "sha256": "08fbbc412c0616b714ee08dfcbd4a1099e70b80cfcaf99456f8c271e62903766"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 33,
+    "approval_v1": {
+      "card terms": "3bf64707925703774c4348f0d33fa3f7e8fca43f5fc75777fa31bd029cc48c76",
+      "file:board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+      "file:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "review:routing_batch": "2026-11-25T21:42:47.117556+00:00"
+    },
+    "workflow_parent": {
+      "name": "2026-11-25T21-42-47.117556+00-00-routing_batch-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "board_checks",
+  "note": "no findings",
+  "outcome": "pass",
+  "target": "visual_review",
+  "track": "board"
+}

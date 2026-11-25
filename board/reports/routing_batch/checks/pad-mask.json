@@ -1,0 +1,12 @@
+{
+ "board": "board/rj45_breakout.kicad_pcb",
+ "pads_checked": 24,
+ "pads_skipped": {
+  "net_tie": 0
+ },
+ "board_mask_expansion_mm": 0.0,
+ "board_mask_min_web_mm": 0.0,
+ "tent_vias_front": true,
+ "tent_vias_back": true,
+ "findings": []
+}

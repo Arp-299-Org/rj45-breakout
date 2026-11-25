@@ -1,0 +1,27 @@
+{
+  "action": "placement",
+  "detail": {
+    "parts_compared": 6,
+    "scope": "Recorded footprint positions, rotations and sides only; not the owner's approval of a rendered view."
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T21:15:20.952136+00:00",
+  "inputs": {
+    "approval_contract": {
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:board/SPACE.md": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "input:board/SPACE.md": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30",
+      "requires": {},
+      "terms": "7b6ed88f2afa185d5ee40f400c4771641395ca022914811264afd28e4cdd7323"
+    },
+    "approval_history_seq": 21,
+    "board/owner_placement.json": "8df3e8bd69d38ebd8d8d96d51b384b44a22e55455d9c588ce4cd2327ccb430d9",
+    "board/rj45_breakout.kicad_pcb": "afe1f0ed78b3c9deb856cadc7469778d13da96ce364e20a8cf0313a22b3fef9f",
+    "tools/board_graph_tool.json": "ea4d30cfab29ed4642927aa71b300cdd620e1853089b44df4dab4628c18bc835"
+  },
+  "node": "placement",
+  "outcome": "pass",
+  "run_id": "f9b23dbe381744588b3288df842e2e2e",
+  "started_at": "2026-11-25T21:15:20.583866+00:00"
+}

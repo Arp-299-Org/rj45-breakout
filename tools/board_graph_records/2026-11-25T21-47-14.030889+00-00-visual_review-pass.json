@@ -1,0 +1,62 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:47:14.030889+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/visual_review/board-critic.md",
+      "sha256": "4af88626641032466d321f688fb64b623ba96594edf9cf8c98e8c43807452a9f"
+    },
+    {
+      "path": "board/reports/visual_review/track-craft.json",
+      "sha256": "79e46ae3501aa02e27d8a919d1f0d397632ff658109335e454f4d311236b1487"
+    },
+    {
+      "path": "board/reports/visual_review/render/board-render.json",
+      "sha256": "8d54d4dcd745166b9e5ffce8cab5dccfbaaf7968087ca23bfdfec62d74e2db1f"
+    },
+    {
+      "path": "board/reports/visual_review/render/3d_top.png",
+      "sha256": "936f5569c85c4e3a97164471756b49721ada7f395e9b2749203c8742fb57e092"
+    },
+    {
+      "path": "board/reports/visual_review/render/3d_bottom.png",
+      "sha256": "6c6d2b7fe47456687c70693b289c04f0894306e1a1bc82a0705f8462a8860812"
+    },
+    {
+      "path": "board/reports/visual_review/render/front_copper.png",
+      "sha256": "5778c4773a5494a7697a102af83318a0e364db2f963954b2e1a750b84939ad0e"
+    },
+    {
+      "path": "board/reports/visual_review/render/front_silk_and_mask.png",
+      "sha256": "41fb1c132f048b9ca578c7cd3a83c02460f4a5af618781316612b34f74a5e6f3"
+    },
+    {
+      "path": "board/reports/visual_review/render/back_silk_and_mask.png",
+      "sha256": "bc1dde9ccb2ecbf2df848351493c7af76e74959afff93708f160c28acf7c5d03"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 34,
+    "approval_v1": {
+      "card terms": "779044c63c670bb208384641aa3362105e5fc93591273b3f4fdc8033455d57d9",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:board/SPACE.md": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30",
+      "file:docs/BOARD_REVIEW.md": "2f938712cba3572dddd1df5c5ee0b19d26a2e9d12a8fccbeb217d09043212f19",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "review:board_checks": "2026-11-25T21:43:10.904707+00:00",
+      "review:routing_batch": "2026-11-25T21:42:47.117556+00:00",
+      "view:silkscreen": "25a21ecf97d7f37e81d9c1247b56b892e553fde5e62904d7fef355ae2e61f5e7"
+    },
+    "attempt_id": "ea811c3a8a7248ab8629a68623fd59e8",
+    "view:copper_and_silk": "7c26e660eae2f49ce3079a98ff0e452f6d5e65968e9cca70e94a749404dc7fcc",
+    "workflow_parent": {
+      "name": "2026-11-25T21-43-10.904707+00-00-board_checks-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "visual_review",
+  "note": "Visual review PASS: board critic verified all 5 renders, track-craft (0 failing/0 inspect), clearances, silkscreen, and bidirectional pin-1 mating.",
+  "outcome": "pass",
+  "target": "verification",
+  "track": "board"
+}

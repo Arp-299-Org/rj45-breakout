@@ -1,0 +1,16 @@
+{
+ "board": "board/rj45_breakout.kicad_pcb",
+ "band_mm": [
+  0.15,
+  0.35
+ ],
+ "threshold": 0.4,
+ "threshold_source": "v2a at 0a39673f, measured by this script on the saved fill: the 18 pad-layers with spokes 0.146 to 0.230, the solid volume wheel tab (R14 pad 7 north) 0.619 on In1.Cu and In2.Cu; 0.40 lies between",
+ "through_hole_pads_checked": 0,
+ "through_hole_pads_net_without_zone": 0,
+ "surface_mount_pads": 18,
+ "other_pads": 6,
+ "net_tie_pads": 0,
+ "rows": [],
+ "findings": []
+}

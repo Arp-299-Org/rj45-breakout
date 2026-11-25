@@ -1,0 +1,716 @@
+{
+  "version": 2,
+  "approval_mode": "enforce",
+  "milestone": "First boards delivered and tested",
+  "docs": [
+    "docs/PRODUCT_TRUTH.md"
+  ],
+  "stop": {
+    "minutes": 120,
+    "repeat_failures": 3,
+    "set_by": "a loop guard, not a plan of work"
+  },
+  "adopted": {
+    "shape": "A stored position per track. Each node ends with one outcome, and the outcome names where to go. A stage is a row of nodes; a stage is passed when its last node passes."
+  },
+  "stay_outcomes": {
+    "more_work": "stay; continue the same task under its agreed stop",
+    "needs_owner": "stay; present the concrete decision to the owner with a recommendation",
+    "needs_lead": "stay; the lead inspects the obstacle and helps",
+    "needs_skill": "stay; practice the missing operation on a disposable copy, then return"
+  },
+  "move_outcomes": {
+    "pass": "move to the node this node's pass names; done when it names done",
+    "returned": "a finding sends work back to one of the nodes this node's returned list allows"
+  },
+  "rules": [
+    "Position is the target of the last transition on the track. With no transition, position is the track's start.",
+    "A node cannot pass while an open issue names it in close_before.",
+    "A node with requires cannot pass until each named node has a pass transition.",
+    "Framework nodes are a list, not a row: their transitions never move a track's position.",
+    "A node with unchanged_pass passes by itself when its view of the board (placement: the board edge and the footprints' positions, sides and mating geometry; copper_and_silk: the board without its part fields) is the one at its last pass: next records the pass as script:unchanged before starting the card, an owner's card included, since the owner's pass on the same view stands. A node a returned record sent work back to does not pass by itself until it records a pass of its own after that return."
+  ],
+  "tracks": [
+    {
+      "id": "board",
+      "label": "Board",
+      "start": "inventory",
+      "ordered": true
+    },
+    {
+      "id": "framework",
+      "label": "Framework (off the board path)",
+      "start": null,
+      "ordered": false
+    }
+  ],
+  "stages": [
+    {
+      "id": "requirements",
+      "label": "Requirements and constraints"
+    },
+    {
+      "id": "schematic",
+      "label": "Schematic, parts, BOM"
+    },
+    {
+      "id": "footprints",
+      "label": "Footprints, models, placement"
+    },
+    {
+      "id": "layout",
+      "label": "Layout and routing"
+    },
+    {
+      "id": "package",
+      "label": "Package, stock, quote"
+    },
+    {
+      "id": "order",
+      "label": "Order and assemble"
+    },
+    {
+      "id": "test",
+      "label": "Test first boards"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "inventory",
+      "track": "board",
+      "stage": "requirements",
+      "label": "Inventory",
+      "who": "auto",
+      "task": "Read the saved schematic, board, rules and BOM. A new board starts at the schematic stage: until the board holds a part, the board file, the rules and the exported BOM may not be there yet, and the record names each one that is not. This proves inventory only, not ERC, DRC or hardware performance.",
+      "pass_when": "The saved schematic, board, rules and BOM read cleanly. Before the board holds a part: the project file and the schematic read cleanly, and so does each of the board, rules and BOM that exists.",
+      "owns": [],
+      "action": "baseline",
+      "outcomes": {
+        "pass": "decisions",
+        "returned": []
+      }
+    },
+    {
+      "id": "decisions",
+      "track": "board",
+      "stage": "requirements",
+      "label": "Decisions",
+      "who": "owner",
+      "task": "Record the owner's product and board decisions for this revision in board/DECISIONS.md, in the owner's words. Each open issue names the node it must close before.",
+      "pass_when": "The decisions for this revision are written, and every open issue names where it closes.",
+      "docs": [
+        "board/DECISIONS.md"
+      ],
+      "owns": [
+        "board/DECISIONS.md",
+        "docs/PRODUCT_TRUTH.md"
+      ],
+      "action": null,
+      "outcomes": {
+        "pass": "constraints",
+        "returned": []
+      },
+      "approval_owned": true
+    },
+    {
+      "id": "constraints",
+      "track": "board",
+      "stage": "requirements",
+      "label": "Constraints",
+      "who": "agent",
+      "task": "Review the circuit, datasheets and actual firmware interface settings, where the board runs firmware, against the electrical contract and the decisions. Justify spacing, return paths, the timing of each bus the board carries, decoupling and power widths; separate source-backed requirements from local choices. Define the first routing batch: its nets, routing mode (`ipc` for clean open channels/buses, `hybrid` for mixed, `interactive` for dense Push-and-Shove), and stop.",
+      "pass_when": "Every rule in the electrical contract is current for this revision, and the first routing batch is defined with nets, routing mode and stop.",
+      "docs": [
+        "board/ELECTRICAL_AUDIT_CONTRACT.md",
+        "board/DECISIONS.md",
+        "board/SPACE.md"
+      ],
+      "owns": [
+        "board/ELECTRICAL_AUDIT_CONTRACT.md"
+      ],
+      "action": null,
+      "outcomes": {
+        "pass": "schematic",
+        "returned": [
+          "decisions"
+        ]
+      },
+      "approval_owned": true,
+      "requires_current": [
+        "decisions"
+      ]
+    },
+    {
+      "id": "schematic",
+      "track": "board",
+      "stage": "schematic",
+      "label": "Schematic",
+      "who": "agent",
+      "task": "The parts and connections. Keep the schematic the source: the board is updated from it. As the card starts, its script runs KiCad's ERC on the saved schematic and reports every error and warning. Render the pages and run the schematic critic; resolve each finding or decline it with a reason. On a new board, this card ends with the files the next cards read: the rules file, the board made by the first update from the schematic, and the first BOM and schematic exports.",
+      "pass_when": "ERC reports 0 errors and 0 warnings; schematic critic findings are resolved; the pages read cleanly: signal left to right, power up, ground down, net labels instead of long crossing wires.",
+      "docs": [
+        "board/DECISIONS.md",
+        ".agents/skills/kicad-10-operator/SKILL.md",
+        "docs/SCHEMATIC_REVIEW.md"
+      ],
+      "owns": [
+        "board/rj45_breakout.kicad_sch",
+        "board/rj45_breakout.kicad_sym",
+        "board/sym-lib-table",
+        "board/rj45_breakout.kicad_pro",
+        "board/rj45_breakout.kicad_dru"
+      ],
+      "action": "erc",
+      "outcomes": {
+        "pass": "bom",
+        "returned": [
+          "constraints"
+        ]
+      },
+      "requires_current": [
+        "constraints"
+      ],
+      "approval_files": [
+        "board/rj45_breakout.kicad_sch"
+      ]
+    },
+    {
+      "id": "bom",
+      "approval_view": "purchasing",
+      "approval_files": [
+        "board/rj45_breakout.kicad_sch",
+        "board/exports/rj45_breakout-bom.csv"
+      ],
+      "track": "board",
+      "stage": "schematic",
+      "label": "BOM",
+      "who": "auto",
+      "task": "An exact part for every schematic part: manufacturer, MPN and supplier identity agree across the schematic, the board and the exported BOM; where a board part carries an LCSC Part # field, it names the part its Supplier Part names; and every approved target is fitted. Validate every row and factory/manual/DNP/off-board boundary, including mechanical-footprint exclusions and hand-soldered through-hole joints on factory SMT parts.",
+      "pass_when": "Schematic, board and exported BOM name the same parts; every approved target is fitted with its selected manufacturer, MPN and supplier; no identity or consistency findings.",
+      "owns": [
+        "board/exports/rj45_breakout-bom.csv"
+      ],
+      "action": "bom",
+      "approved_targets": [],
+      "outcomes": {
+        "pass": "stock",
+        "returned": [
+          "schematic",
+          "constraints"
+        ]
+      }
+    },
+    {
+      "id": "stock",
+      "requires_current": [
+        "bom"
+      ],
+      "track": "board",
+      "stage": "schematic",
+      "label": "Stock",
+      "who": "agent",
+      "task": "Can the factory supply those exact parts. Record dated listings for every factory part: listed manufacturer, MPN, supplier ID, class, stock and price. For a shortage or preorder, record the owner's accepted plan in the owner's words; a plan is not confirmed fulfillment. Write them to <reports>/stock/listings.json: planning_quantity (the boards planned) and factory_parts, one entry per supplier part with part, read_at, listed_manufacturer, listed_mpn, class, stock and unit_price_usd, and owner_plan where the stock is short. As the card starts, its script compares that file with the saved board.",
+      "pass_when": "A dated listing exists for every factory part, at most 30 days old; every shortage has a plan the owner accepted.",
+      "docs": [
+        "board/DECISIONS.md"
+      ],
+      "owns": [],
+      "action": "supply_receipt",
+      "outcomes": {
+        "pass": "datasheets",
+        "returned": [
+          "bom",
+          "schematic",
+          "constraints"
+        ]
+      },
+      "approval_owned": true
+    },
+    {
+      "id": "datasheets",
+      "track": "board",
+      "stage": "footprints",
+      "label": "Datasheets",
+      "who": "auto",
+      "task": "Every BOM part has its datasheet in hardware/reference and its package and height taken from it into hardware/reference/parts.json.",
+      "pass_when": "Every BOM part is in parts.json with a datasheet on hand and a height taken from it.",
+      "owns": [
+        "hardware/reference/parts.json",
+        "hardware/reference"
+      ],
+      "action": "datasheets",
+      "outcomes": {
+        "pass": "models",
+        "returned": [
+          "bom"
+        ]
+      },
+      "approval_owned": true
+    },
+    {
+      "id": "models",
+      "track": "board",
+      "stage": "footprints",
+      "label": "Models",
+      "who": "auto",
+      "task": "Every part's 3D model loads, and its top matches the datasheet height. Make or check the model against the datasheet.",
+      "pass_when": "Every part's 3D model loads and its top is within 0.3 mm of the datasheet height.",
+      "owns": [
+        "board/models"
+      ],
+      "action": "models",
+      "outcomes": {
+        "pass": "footprints",
+        "returned": [
+          "bom"
+        ]
+      },
+      "approval_owned": true
+    },
+    {
+      "id": "footprints",
+      "track": "board",
+      "stage": "footprints",
+      "label": "Footprints",
+      "who": "auto",
+      "task": "Every board footprint is identical to its library copy, and the library holds nothing the board does not use. Every joint soldered by hand is shown buildable from the maker's data by scripts/board_manual_joints.py, which writes board/reports/footprints/manual_joints.md: the real pin, from its datasheet in hardware/reference/parts.json, passes the smallest finished hole, or the hole is as the maker draws it; the pad has a mask opening on both faces; it joins no plane solid. A joint with neither a pin nor a maker's hole on record is not proven and keeps this card open. A repair changes only what the finding names.",
+      "pass_when": "Every board footprint matches its library copy; the library has no unused footprint; DRC's accepted library-mismatch list is empty; every hand-soldered joint fits its pin or is as the maker draws it, has mask openings and thermal relief, and none is unproven.",
+      "owns": [
+        "board/rj45_breakout.pretty",
+        "board/fp-lib-table"
+      ],
+      "action": "footprints",
+      "outcomes": {
+        "pass": "placement",
+        "returned": [
+          "bom"
+        ]
+      },
+      "approval_owned": true
+    },
+    {
+      "id": "placement",
+      "approval_files": [
+        "board/owner_placement.json",
+        "board/SPACE.md"
+      ],
+      "track": "board",
+      "stage": "footprints",
+      "label": "Placement",
+      "who": "owner",
+      "task": "Compare recorded footprint positions, rotations and sides with the owner's approved placement, render the views, and get the owner's approval on a rendered view. The approval covers which way each part faces and whether a human can operate it cleanly, so before asking, look at every part with a direction or human contact on the rendered view: connectors toward their edge or their mate, a cable connector's latch toward its cable, switches, lights and knobs toward the hand and eye that use them, ergonomic finger/thumb touch clearance around every tactile control against tall parts, sockets, overhanging displays/modules and board edges, 2-pin passives and small ICs oriented so signal/power pads directly face their targets, plus pin 1 and polarity marks. Changed placement needs a new approval; never route ahead of it.",
+      "pass_when": "Recorded positions, rotations and sides match board/owner_placement.json, and the owner has approved the rendered view.",
+      "docs": [
+        "board/SPACE.md",
+        "board/DECISIONS.md"
+      ],
+      "owns": [
+        "board/owner_placement.json"
+      ],
+      "action": "placement",
+      "outcomes": {
+        "pass": "routing_batch",
+        "returned": [
+          "schematic",
+          "bom"
+        ]
+      },
+      "unchanged_pass": "placement"
+    },
+    {
+      "id": "routing_batch",
+      "approval_view": "copper",
+      "approval_source": "routing_constraints",
+      "requires_current": [
+        "placement"
+      ],
+      "track": "board",
+      "stage": "layout",
+      "label": "Routing batch",
+      "who": "agent",
+      "task": "Start from the latest incoming graph record and its evidence to define this visit. On a review return, first inspect its findings without editing copper: separate accepted geometry and checker artifacts, repair checker defects, and bring conflicting rules or owner tradeoffs to the owner with a recommendation and cost. Define the next bounded copper batch and plan each task file's `Mode:` (`ipc` for clean channels/buses, `hybrid` default for mixed runs, `interactive` for dense Push-and-Shove) only after those dispositions and owner authorization. Work in the KiCad machine's editor. Commit task files with the named connections and `Mode:`. Use the Tool command in this brief. It runs the locked KiCad editor, verifies the saved board and records the result. Before a copper batch, its nets must be clear of open issues. That run is the only way copper is laid: never write tracks, vias or pours with ad-hoc scripts (`wrapper_calls`), raw `create_items` outside `kicad_lay.py`, direct `.kicad_pcb` edits, or an unauthorized router, and never lay copper by hand outside the run. When the run cannot lay a connection, record needs_lead with what the tool returned and stop; the card refuses pass and more_work while the board holds copper that no run committed. Refill zones and save. Run the copper diff against origin/main with the batch nets, declaring each change to earlier copper or part positions as a fix with its reason. Render and inspect the pictures. Run fresh saved-fill, DRC/parity, route-quality, electrical, pad-mask, thermal-relief, hand-solder-joint and exhaustive checks and the relevant track-craft checks. Resolve or explain each finding and obtain the targeted board critic. Record more_work with the batch nets until the whole board is routed. Preserve accepted placements, labels and waivers unless the owner changes that decision.",
+      "pass_when": "All intended connections are routed; saved-state connectivity, return paths and relevant checks inspected on the current revision.",
+      "docs": [
+        "docs/ROUTING_NOTES.md",
+        "board/SPACE.md",
+        "board/DECISIONS.md",
+        "board/ELECTRICAL_AUDIT_CONTRACT.md",
+        ".agents/skills/kicad-10-operator/SKILL.md",
+        "docs/BOARD_REVIEW.md",
+        "docs/BOARD_EVIDENCE.md"
+      ],
+      "owns": [
+        "board/rj45_breakout.kicad_pcb"
+      ],
+      "action": "routing_run",
+      "outcomes": {
+        "pass": "board_checks",
+        "returned": [
+          "placement",
+          "schematic"
+        ]
+      },
+      "unchanged_pass": "copper_and_silk"
+    },
+    {
+      "id": "board_checks",
+      "track": "board",
+      "stage": "layout",
+      "label": "Board checks",
+      "who": "auto",
+      "task": "Read the validate run the graph holds for this commit: scripts/validate_board.py as the KiCad machine ran it, by a validate workflow on its runner or, in a project without one, by scripts/run_board_checks.py there (ERC, DRC with schematic parity, saved fills, route quality, the board's electrical audit when its description names one, pad mask, thermal relief on through-hole pads, the hand-soldered joints, the full board audit when its description names one, and routing progress). A run that allowed an unfinished board, inherited a failure from its base or skipped the checks as an incremental change is not a pass.",
+      "pass_when": "Every check passes on this revision with no inherited or unfinished-board allowance.",
+      "owns": [],
+      "action": "board_checks",
+      "outcomes": {
+        "pass": "visual_review",
+        "returned": [
+          "routing_batch"
+        ]
+      },
+      "requires_current": [
+        "routing_batch"
+      ],
+      "approval_files": [
+        "board/rj45_breakout.kicad_pcb",
+        "board/rj45_breakout.kicad_sch"
+      ]
+    },
+    {
+      "id": "visual_review",
+      "approval_view": "silkscreen",
+      "requires_current": [
+        "routing_batch",
+        "board_checks"
+      ],
+      "track": "board",
+      "stage": "layout",
+      "label": "Visual review",
+      "who": "agent",
+      "task": "Render the board views and run the board critic against the exact files and pictures. Run tools/kicad/check_track_craft.py with --output board/reports/visual_review/track-craft.json for the track-craft rules. Look at what the finished board shows a user: front-panel parts, displays, labels and connector openings. Resolve each finding or decline it with a one-line reason; owner tradeoffs go to the owner.",
+      "pass_when": "Board critic findings on the rendered views are resolved or declined with a reason.",
+      "docs": [
+        "board/SPACE.md",
+        "board/DECISIONS.md",
+        "docs/BOARD_REVIEW.md"
+      ],
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "verification",
+        "returned": [
+          "routing_batch",
+          "placement",
+          "schematic",
+          "board_checks"
+        ]
+      },
+      "unchanged_pass": "copper_and_silk"
+    },
+    {
+      "id": "verification",
+      "requires_current": [
+        "visual_review",
+        "schematic"
+      ],
+      "track": "board",
+      "stage": "package",
+      "label": "Verification",
+      "pass_check": "freshness",
+      "who": "agent",
+      "task": "Reconcile active contracts, scripts and critic rubrics against the finished design. Close every open issue that names this node. Run fresh checks into <reports>/verification/checks (scripts/validate_board.py --out) and stamp every report there against this board's hash (scripts/kicad_report_freshness.py stamp). Before recording pass, the graph checks the stamps and the independent review receipt. An independent review reproduces the checks from the files, not the reports. Cite the independent-review receipt for the current schematic and board and the reproduced reports.",
+      "pass_when": "Every open issue naming verification is closed; all reports are fresh against this board's hash; the independent review reproduces the checks.",
+      "docs": [
+        "board/ELECTRICAL_AUDIT_CONTRACT.md",
+        "board/ORDER_PACKAGE_CONTRACT.md",
+        "docs/BOARD_ORDER_COMMON_SENSE_CHECKLIST.md",
+        "board/DECISIONS.md",
+        "docs/BOARD_EVIDENCE.md"
+      ],
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "quote_files",
+        "returned": [
+          "routing_batch",
+          "schematic",
+          "visual_review"
+        ]
+      },
+      "approval_files": [
+        "board/rj45_breakout.kicad_pcb",
+        "board/rj45_breakout.kicad_sch"
+      ],
+      "release_check": "independent_review"
+    },
+    {
+      "id": "quote_files",
+      "track": "board",
+      "stage": "package",
+      "label": "Prepare quote files",
+      "who": "agent",
+      "task": "Prepare provisional fabrication and assembly files for comparable supplier quotes. Gather price, quantity, availability and manual assembly options for the owner. Label the revision and assembly scope of each option.",
+      "pass_when": "The owner can compare feasible options from the same board revision and see the tradeoffs. The prepared files and options are cited.",
+      "docs": [
+        "board/ORDER_PACKAGE_CONTRACT.md"
+      ],
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "quote",
+        "returned": [
+          "bom",
+          "routing_batch",
+          "verification"
+        ]
+      },
+      "approval_owned": true,
+      "requires_current": [
+        "verification",
+        "bom"
+      ]
+    },
+    {
+      "id": "quote",
+      "track": "board",
+      "stage": "package",
+      "label": "Quote",
+      "who": "owner",
+      "task": "Refresh stock for the final BOM. Obtain the assembler's quotes at each service level it offers for the same board, quantity and assembly scope, at each quantity the owner names, itemized as PCB fabrication, components, setup and stencil, feeder loading, minimum quantities and attrition, SMT assembly, through-hole or hand assembly, special inspection or processes, sourcing or consignment, and shipping and taxes, including any factory-soldered through-hole parts. Show total delivered cost and the incremental cost of fuller assembly. Run docs/BOARD_ORDER_COMMON_SENSE_CHECKLIST.md on the final files; its rows on hand-soldered joints are checked first at the Footprints card and by CI on every board change, and are read again here. The owner chooses assembly scope and quantity.",
+      "pass_when": "Stock is current for the final BOM; the quotes are itemized; the checklist passes with direct evidence; the owner has chosen assembly scope and quantity.",
+      "docs": [
+        "docs/BOARD_ORDER_COMMON_SENSE_CHECKLIST.md",
+        "board/DECISIONS.md"
+      ],
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "package",
+        "returned": [
+          "bom",
+          "routing_batch",
+          "quote_files"
+        ]
+      },
+      "approval_owned": true,
+      "requires_current": [
+        "quote_files"
+      ]
+    },
+    {
+      "id": "package",
+      "approval_source": "sealed_package",
+      "track": "board",
+      "stage": "package",
+      "label": "Package",
+      "pass_check": "package",
+      "who": "agent",
+      "task": "Generate and seal the final files for the revision, quantity and assembly scope selected at Quote. Follow the order package contract. The package check verifies the sealed files against the saved design before the card can pass.",
+      "pass_when": "Order package gates G1 to G10 and G12 pass; the exact archive and its evidence are attached.",
+      "owns": [
+        "board/production"
+      ],
+      "action": null,
+      "outcomes": {
+        "pass": "orientation_preview",
+        "returned": [
+          "routing_batch",
+          "bom",
+          "quote",
+          "verification"
+        ]
+      },
+      "requires_current": [
+        "verification",
+        "quote"
+      ]
+    },
+    {
+      "id": "orientation_preview",
+      "presentation": "assembler_preview",
+      "approval_source": "sealed_package",
+      "requires_current": [
+        "package"
+      ],
+      "track": "board",
+      "stage": "package",
+      "label": "Orientation preview",
+      "who": "owner",
+      "task": "Gate G11: the owner looks at the assembler's placement preview for every polarized or orientation-sensitive part and writes the result in board/DECISIONS.md with the date.",
+      "pass_when": "The owner has written the preview result for every polarized part in DECISIONS with the date.",
+      "docs": [
+        "board/DECISIONS.md"
+      ],
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "order",
+        "returned": [
+          "routing_batch",
+          "package"
+        ]
+      }
+    },
+    {
+      "id": "order",
+      "approval_source": "sealed_package",
+      "requires_current": [
+        "bom",
+        "stock",
+        "visual_review",
+        "verification",
+        "quote",
+        "package",
+        "orientation_preview"
+      ],
+      "track": "board",
+      "stage": "order",
+      "label": "Order",
+      "who": "owner",
+      "task": "Present the exact files, quantity, total cost, manual work and known tradeoffs. List what the owner buys apart from the factory order, set against the parts on hand recorded in board/DECISIONS.md: modules, displays, cables and enclosure hardware the board needs, and the bench items to have before the boards arrive: a power source with current limiting, cables, and loads and measurement equipment for the first-article tests. Recheck the exact BOM's availability after the quote. Place the order only with the owner's explicit authorization.",
+      "pass_when": "The owner authorized; the order number, quantity, cost and supplier confirmation are recorded.",
+      "docs": [
+        "docs/BOARD_ORDER_COMMON_SENSE_CHECKLIST.md",
+        "board/ORDER_PACKAGE_CONTRACT.md",
+        "board/DECISIONS.md"
+      ],
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "delivery",
+        "returned": [
+          "quote",
+          "bom",
+          "stock",
+          "visual_review",
+          "verification",
+          "package",
+          "orientation_preview"
+        ]
+      },
+      "pass_check": "supply_receipt"
+    },
+    {
+      "id": "delivery",
+      "track": "board",
+      "stage": "order",
+      "label": "Delivery",
+      "who": "owner",
+      "task": "Receive the boards. Record quantities and the incoming inspection against the ordered revision, as the board's first-article test procedure writes it.",
+      "pass_when": "Boards received; incoming discrepancies resolved or explicitly carried into bench work.",
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "assembly",
+        "returned": [
+          "order",
+          "quote"
+        ]
+      },
+      "approval_owned": true,
+      "requires_current": [
+        "order"
+      ]
+    },
+    {
+      "id": "assembly",
+      "track": "board",
+      "stage": "order",
+      "label": "Assembly",
+      "who": "owner",
+      "task": "Per unit: an unpowered electrical check, dry fit, hand soldering in the written order, and an unpowered check after soldering, as the first-article test procedure writes them. Any remaining assembly from the selected factory scope.",
+      "pass_when": "The assembly steps of the first-article test procedure are recorded for each identified unit.",
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "first_power",
+        "returned": [
+          "delivery"
+        ]
+      },
+      "approval_owned": true,
+      "requires_current": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "first_power",
+      "track": "board",
+      "stage": "test",
+      "label": "First power",
+      "who": "owner",
+      "task": "The first-power steps of the first-article test procedure, in order: current-limited first power with no expensive module or load fitted, then each stage the procedure adds. Smoke, heat, a runaway current, or on a board with an audio output a squeal, runaway tone or full-scale output, is stop-ship.",
+      "pass_when": "The first-power steps are recorded for each unit, with the firmware build named when the board runs firmware.",
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "subsystems",
+        "returned": [
+          "schematic",
+          "routing_batch",
+          "assembly"
+        ]
+      },
+      "approval_owned": true,
+      "requires_current": [
+        "assembly"
+      ]
+    },
+    {
+      "id": "subsystems",
+      "track": "board",
+      "stage": "test",
+      "label": "Subsystems",
+      "who": "owner_and_agent",
+      "task": "Every subsystem the decisions name, alone and all at once. Measure what docs/PRODUCT_TRUTH.md says is measured, against its stated baseline, with the equipment named.",
+      "pass_when": "Measured evidence for every subsystem is recorded for the received units and the exact firmware binary, where there is one; outstanding failures remain explicit.",
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "product_judgment",
+        "returned": [
+          "schematic",
+          "routing_batch",
+          "first_power"
+        ]
+      },
+      "approval_owned": true,
+      "requires_current": [
+        "first_power"
+      ]
+    },
+    {
+      "id": "product_judgment",
+      "track": "board",
+      "stage": "test",
+      "label": "Product judgment",
+      "who": "owner",
+      "task": "The enclosure fit, a real use of the finished product, and whether the build process is repeatable. How using it feels to the owner is evidence about the product; what docs/PRODUCT_TRUTH.md says is measured is measured, never felt.",
+      "pass_when": "The owner accepts the identified first article against the project criteria. Cite the product-acceptance receipt and the observations for each tested unit and configuration.",
+      "owns": [],
+      "action": null,
+      "outcomes": {
+        "pass": "done",
+        "returned": [
+          "schematic",
+          "routing_batch",
+          "subsystems"
+        ]
+      },
+      "docs": [
+        "docs/BOARD_EVIDENCE.md"
+      ],
+      "approval_owned": true,
+      "requires_current": [
+        "subsystems"
+      ],
+      "release_check": "first_article",
+      "integration": {
+        "boards": {
+          "rj45_breakout": "board/rj45_breakout.kicad_pcb"
+        }
+      }
+    }
+  ],
+  "open_issues": []
+}

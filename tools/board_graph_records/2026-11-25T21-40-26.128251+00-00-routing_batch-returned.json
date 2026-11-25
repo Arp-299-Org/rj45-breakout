@@ -1,0 +1,24 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:40:26.128251+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/schematic/erc.json",
+      "sha256": "498151955e73d56cf95031b008fc6b3847daaf5f8ee7129d0fc029a376908b96"
+    }
+  ],
+  "inputs": {
+    "attempt_id": "ae05d0225e92410b93b98c332abf5040",
+    "board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "view:copper_and_silk": "7c26e660eae2f49ce3079a98ff0e452f6d5e65968e9cca70e94a749404dc7fcc",
+    "workflow_parent": {
+      "name": "2026-11-25T21-21-09.482449+00-00-routing_batch-more_work.json",
+      "scope": "track"
+    }
+  },
+  "node": "routing_batch",
+  "note": "Return to schematic to refresh schematic approval without board/rj45_breakout.kicad_pcb in cited evidence so verification has a current schematic approval.",
+  "outcome": "returned",
+  "target": "schematic",
+  "track": "board"
+}

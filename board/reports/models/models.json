@@ -1,0 +1,41 @@
+{
+  "action": "models",
+  "checked_scope": {
+    "card terms": "07df197ab4afab23a5fa70863df101905f6abd1c4caf886c7b71b63cbbecc6c8",
+    "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+    "owned:board/models": {
+      "sha256": "49d9d22a6a29a3c40c8da2e30f478923601d7e95d645e0cba5a2fd3d670bd924"
+    }
+  },
+  "detail": {
+    "height_tolerance_mm": 0.3,
+    "left_for_footprints": [],
+    "model_sha256": {
+      "${KIPRJMOD}/models/Hanxia_HX_PZ2.54-1x8P_TP-ZQ.step": "a1fc91b83a419fbd56290fe846045fe15720dbde7678c7e9c8e3c5ddf25c4f81",
+      "${KIPRJMOD}/models/Heling_MJ56881-B011-HLRN1-C.step": "31681193ca2051e0425524304a944c0a966d57e4d605c96af0c33169d8b50fbe"
+    }
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T21:41:37.430757+00:00",
+  "inputs": {
+    "approval_contract": {
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "requires": {},
+      "terms": "07df197ab4afab23a5fa70863df101905f6abd1c4caf886c7b71b63cbbecc6c8"
+    },
+    "approval_history_seq": 29,
+    "board/exports/rj45_breakout-bom.csv": "f4091d2ff38ffe4a438c134298ec93f1f422c4b35b84a79730887f50e4b5501a",
+    "board/models": "49d9d22a6a29a3c40c8da2e30f478923601d7e95d645e0cba5a2fd3d670bd924",
+    "board/reports/documented-drc-exclusions.json": "9ce753f95743462138add1a5188d8339478cb3d97fe4c71bd2e22e4b0b3b5d74",
+    "board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "board/rj45_breakout.pretty": "f64b4a010c3429c7791cccb5b498f50350d5a37d3908b3343982eee33f3e2548",
+    "hardware/reference": "551533fab661ed9a8dd67cdc0e69f5916670d1a82e393c75c2e1cf148f274ab7",
+    "tools/board_graph.json": "ad0942fb15308e24d20b017393c1676a49fa6e4714c3b462b8af69d10dfb14d5",
+    "tools/board_graph_tool.json": "1774c25b578cd90a835f8b6fe7b81a6f701bbd3650d6beec95323fa9a929fee1"
+  },
+  "node": "models",
+  "outcome": "pass",
+  "run_id": "9d22305834da481c8fa59f7c213fa2e7",
+  "started_at": "2026-11-25T21:41:37.024148+00:00"
+}

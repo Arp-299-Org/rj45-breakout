@@ -1,0 +1,78 @@
+{
+  "batch": [
+    {
+      "kind": "net",
+      "name": "RJ45_1",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    },
+    {
+      "kind": "net",
+      "name": "RJ45_2",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    },
+    {
+      "kind": "net",
+      "name": "RJ45_3",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    },
+    {
+      "kind": "net",
+      "name": "RJ45_4",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    },
+    {
+      "kind": "net",
+      "name": "RJ45_5",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    },
+    {
+      "kind": "net",
+      "name": "RJ45_6",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    },
+    {
+      "kind": "net",
+      "name": "RJ45_7",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    },
+    {
+      "kind": "net",
+      "name": "RJ45_8",
+      "added": {
+        "segment": 3
+      },
+      "removed": {},
+      "split": {}
+    }
+  ],
+  "fixes": [],
+  "undeclared": []
+}

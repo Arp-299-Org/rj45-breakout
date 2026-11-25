@@ -1,0 +1,50 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:52:12.203287+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/quote_files/quote-options.md",
+      "sha256": "fd1bedf8b1b253de857eebe687b5d0dc0bd8bbba2e1548707ba3bb1e7c73b8e7"
+    },
+    {
+      "path": "board/reports/quote_files/fab/assembly-manifest.json",
+      "sha256": "3825d40ecaab120e896d4e890a92bf5e978fa6e584a38beeb437545b41485b7e"
+    },
+    {
+      "path": "board/reports/quote_files/fab/RJ45_BREAKOUT.zip",
+      "sha256": "4331038fca3bc901fbcbcf02ff73bc75a4c306e4d3ca07ee922d2f3501e664b9"
+    },
+    {
+      "path": "board/reports/quote_files/fab/RJ45_BREAKOUT_SMT_bom.csv",
+      "sha256": "3156f7568010a8d9dbcba2772a38c26d201e208e499294fdb62d89c50c53707f"
+    },
+    {
+      "path": "board/reports/quote_files/fab/RJ45_BREAKOUT_SMT_positions.csv",
+      "sha256": "e4ed99a9852140daa37f47ce6bd7ebe6b6bffb9e5a689e75b0b13425143f1253"
+    },
+    {
+      "path": "README.md",
+      "sha256": "56da421d9be8e732fa9f8b1e6254888e9442878eb384b5a3798609575e02b277"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 36,
+    "approval_v1": {
+      "card terms": "1ae7e0e0d6e6999f98b89e5652127f84494a2b6f9ccdc72457054f0f2977a709",
+      "file:board/ORDER_PACKAGE_CONTRACT.md": "dd349211c9ceabde689c6de46d435a1dd8b39db0964c85058c0d7165a8c0b6db",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "review:bom": "2026-11-25T21:40:56.741654+00:00",
+      "review:verification": "2026-11-25T21:50:50.322779+00:00"
+    },
+    "attempt_id": "2d09fdc77262409fbd2bcc1765e8d806",
+    "workflow_parent": {
+      "name": "2026-11-25T21-50-50.322779+00-00-verification-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "quote_files",
+  "note": "Prepared provisional JLCPCB Gerbers, drills, IPC netlist, SMT BOM/CPL (2 front-side SMT parts, 0 hand soldering), quote options (Qty 5 vs 10 PCBA vs bare PCB), and updated public README.",
+  "outcome": "pass",
+  "target": "quote",
+  "track": "board"
+}

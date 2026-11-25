@@ -1,0 +1,23 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:12:47.321847+00:00",
+  "evidence": [
+    {
+      "path": "board/SPACE.md",
+      "sha256": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30"
+    }
+  ],
+  "inputs": {
+    "board/rj45_breakout.kicad_pcb": "afe1f0ed78b3c9deb856cadc7469778d13da96ce364e20a8cf0313a22b3fef9f",
+    "view:copper_and_silk": "482e5b79b72e14ae2d6288e95ec638d76eb455264b9b16c40235dd3e79a6fb5d",
+    "workflow_parent": {
+      "name": "2026-11-25T20-35-58.299410+00-00-routing_batch-needs_lead.json",
+      "scope": "track"
+    }
+  },
+  "node": "routing_batch",
+  "note": "Return through schematic to constraints so updated board/SPACE.md and v0.32.2 canonical BOM and placement views are approved before routing adoption.",
+  "outcome": "returned",
+  "target": "schematic",
+  "track": "board"
+}

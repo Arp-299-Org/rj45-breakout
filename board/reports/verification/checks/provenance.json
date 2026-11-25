@@ -1,0 +1,58 @@
+{
+  "drc-refilled-copy.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  },
+  "drc.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  },
+  "erc.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  },
+  "manual-joints.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  },
+  "pad-mask.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  },
+  "route-quality.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  },
+  "summary.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  },
+  "thermal-relief.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:12+00:00",
+    "generator": "validate_board.py",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  }
+}

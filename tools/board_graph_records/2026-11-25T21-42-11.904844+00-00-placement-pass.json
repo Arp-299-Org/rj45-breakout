@@ -1,0 +1,19 @@
+{
+  "actor": "script:unchanged",
+  "at": "2026-11-25T21:42:11.904844+00:00",
+  "evidence": [],
+  "inputs": {
+    "approval_history_seq": 31,
+    "board/owner_placement.json": "8df3e8bd69d38ebd8d8d96d51b384b44a22e55455d9c588ce4cd2327ccb430d9",
+    "view:placement": "fd382e1d5b787773aae2edec3e042ab6d42a9f951d5b7a833099081864a01557",
+    "workflow_parent": {
+      "name": "2026-11-25T21-41-54.946054+00-00-footprints-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "placement",
+  "note": "Review by owner at 2026-11-25T21:17:42.041848+00:00 still covers the declared inputs",
+  "outcome": "pass",
+  "target": "routing_batch",
+  "track": "board"
+}

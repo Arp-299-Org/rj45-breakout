@@ -1,0 +1,24 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T20:35:58.299410+00:00",
+  "evidence": [
+    {
+      "path": "tasks/run-eacfd11d.jsonl",
+      "sha256": "6d73fe741f4a17e251975bc25f5ce3574cd6fe1501d0825d5487216340a8b47e"
+    }
+  ],
+  "inputs": {
+    "attempt_id": "eacfd11d968f4124a1836992cc065aa6",
+    "board/rj45_breakout.kicad_pcb": "afe1f0ed78b3c9deb856cadc7469778d13da96ce364e20a8cf0313a22b3fef9f",
+    "view:copper_and_silk": "482e5b79b72e14ae2d6288e95ec638d76eb455264b9b16c40235dd3e79a6fb5d",
+    "workflow_parent": {
+      "name": "2026-11-25T20-10-23.266639+00-00-placement-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "routing_batch",
+  "note": "Routing run eacfd11d in the Mac's PCB Editor: 1 of 1 steps kept. Open connections 8 to 0, errors 0 to 0, findings 0 to 0. IPC lay calls 1: 1 laid, 0 refused. Tokens: 211,336. Stopped: every task was kept. Time: 156s (LLM 81s, tools 22s, review 41s; thinking 7,059). Not adopted: the board changed beyond tracks, arcs and vias: footprint H1 changed; footprint H2 changed; footprint H3 changed; footprint H4 changed; footprint J1 changed; footprint J2 changed; graphic gr_arc changed; graphic gr_arc changed; graphic gr_arc changed; graphic gr_arc changed; graphic gr_line changed; graphic gr_line changed; graphic gr_line changed; graphic gr_line changed; setup changed; text '1' changed; text '1' changed; text '2' changed; text '2' changed; text '3' changed; text '3' changed; text '4' changed; text '4' changed; text '5' changed; text '5' changed; text '6' changed; text '6' changed; text '7' changed; text '7' changed; text '8' changed; text '8' changed; text 'B' changed; text 'Br' changed; text 'G' changed; text 'O' changed; text 'RJ45 BREAKOUT REV A' changed; text 'RJ45 BREAKOUT' changed; text 'T568B PINOUT\\n1: W/O   2: O\\n3: W/G   4: B\\n5: W/B   6: G\\n7: W/Br  8: Br' changed; text 'W/B' changed; text 'W/Br' changed; text 'W/G' changed; text 'W/O' changed.",
+  "outcome": "needs_lead",
+  "target": "routing_batch",
+  "track": "board"
+}

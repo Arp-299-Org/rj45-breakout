@@ -1,0 +1,78 @@
+{
+  "action": "footprints",
+  "checked_scope": {
+    "card terms": "fe56a415810a8c807aebc010480ca412d430fe076a06257470898f74f6d28f83",
+    "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+    "owned:board/fp-lib-table": {
+      "sha256": "313b2caaad79d4f682fe301b8ce845cf1a674f511380cd1e43931143754af665"
+    },
+    "owned:board/rj45_breakout.pretty": {
+      "sha256": "f64b4a010c3429c7791cccb5b498f50350d5a37d3908b3343982eee33f3e2548"
+    }
+  },
+  "detail": {
+    "accepted_mismatches": [],
+    "board_footprints": 6,
+    "copied_files": 80,
+    "drc_command": "kicad-cli pcb drc --format json --severity-all, no refill, no schematic parity",
+    "exclusions_emptied_on_the_copy": 0,
+    "kicad_version": "10.0.8",
+    "library_checks": {},
+    "library_footprints": 3,
+    "manual_joints": {
+      "counts": {
+        "as_the_maker_draws_it": 0,
+        "does_not_fit": 0,
+        "mask_missing": 0,
+        "not_fitted": 0,
+        "not_proven": 0,
+        "rows": 0,
+        "solid": 0
+      },
+      "rows": [],
+      "rules_note": null,
+      "tolerance": {
+        "minus_mm": 0.08,
+        "plus_mm": 0.13,
+        "source": "JLCPCB capabilities page, plated hole finished size +0.13 / -0.08 mm, read 2026-11-11"
+      }
+    },
+    "other_violations_on_the_copy": {},
+    "own_models": [],
+    "project_file_exclusions": [],
+    "scope": "Footprint identity with the project library and the library's contents, and the hand-soldered joints against their datasheet pins. The other violations DRC raised on the copy are CI's DRC gate to decide, not this node's.",
+    "shared": {
+      "MountingHole_3.2mm_M3": [
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ]
+    },
+    "unconnected_items": 0,
+    "unexpected_files": [],
+    "unused": []
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T21:41:54.451982+00:00",
+  "inputs": {
+    "approval_contract": {
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "requires": {},
+      "terms": "fe56a415810a8c807aebc010480ca412d430fe076a06257470898f74f6d28f83"
+    },
+    "approval_history_seq": 30,
+    "board/fp-lib-table": "313b2caaad79d4f682fe301b8ce845cf1a674f511380cd1e43931143754af665",
+    "board/reports/documented-drc-exclusions.json": "9ce753f95743462138add1a5188d8339478cb3d97fe4c71bd2e22e4b0b3b5d74",
+    "board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "board/rj45_breakout.kicad_pro": "a2d6f0cf5fbeaf8bf9dc29c9113465e94e1e042adcde4e826b5e6695d16a5d90",
+    "board/rj45_breakout.pretty": "f64b4a010c3429c7791cccb5b498f50350d5a37d3908b3343982eee33f3e2548",
+    "hardware/reference/parts.json": "049c49a73a9c0c54c6607138913e6500df214966209116d6b64ab979c2a492f0",
+    "scripts/board_manual_joints.py": "e53a827e6f1390d42082bc5b33e41b208557190d15fff287f39229cabebba324",
+    "tools/board_graph_tool.json": "1774c25b578cd90a835f8b6fe7b81a6f701bbd3650d6beec95323fa9a929fee1"
+  },
+  "node": "footprints",
+  "outcome": "pass",
+  "run_id": "56b6de2b82dd452691dc85cd3b343feb",
+  "started_at": "2026-11-25T21:41:51.218192+00:00"
+}

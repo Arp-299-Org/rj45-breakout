@@ -1,0 +1,12 @@
+Mode: ipc
+Connection: J1.1 J2.1 /RJ45_1
+Connection: J1.2 J2.2 /RJ45_2
+Connection: J1.3 J2.3 /RJ45_3
+Connection: J1.4 J2.4 /RJ45_4
+Connection: J1.5 J2.5 /RJ45_5
+Connection: J1.6 J2.6 /RJ45_6
+Connection: J1.7 J2.7 /RJ45_7
+Connection: J1.8 J2.8 /RJ45_8
+Pad exits: centered
+
+Route all 8 RJ45 signal nets (/RJ45_1 through /RJ45_8) cleanly on F.Cu in one planar fanout batch from J1 pins 1..8 (south short edges at y=14.89 mm, x=14.43..21.57 mm) to J2 pins 1..8 (north short edges at y=21.80 mm for even pins and y=25.00 mm for odd pins, x=9.11..26.89 mm), using 0.25 mm trace width, 0.20 mm minimum clearance, 0 vias, and symmetric 45-degree fanout in the open Y=15.5..21.5 mm channel. Exit every pad straight from its center through its facing short edge (south edge of J1, north edge of J2) and stay clear of all mounting holes and locating pegs.

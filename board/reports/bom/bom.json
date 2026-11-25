@@ -1,0 +1,55 @@
+{
+  "action": "bom",
+  "checked_scope": {
+    "card terms": "cad1f14de18e13bdc3994e96f5f25015afc808d2c13575d38ba2aef5d3895255",
+    "file:board/exports/rj45_breakout-bom.csv": "f4091d2ff38ffe4a438c134298ec93f1f422c4b35b84a79730887f50e4b5501a",
+    "file:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+    "view:purchasing": "d9592191fe92f747080dbeaffebb3ce68e612749377db5240e077a8d758d6c22"
+  },
+  "detail": {
+    "fitted_components": 2,
+    "grouped_rows": 2,
+    "note": "Identity and consistency only. Stock, price and assembly eligibility are the Stock and Quote nodes' work.",
+    "rows": [
+      {
+        "assembly": "factory SMT",
+        "factory_sides": [
+          "F.Cu"
+        ],
+        "mpn": "MJ56881-B011-HLRN1-C",
+        "owner_manual_through_hole": [],
+        "refs": "J1"
+      },
+      {
+        "assembly": "factory SMT",
+        "factory_sides": [
+          "F.Cu"
+        ],
+        "mpn": "HX PZ2.54-1x8P TP-ZQ",
+        "owner_manual_through_hole": [],
+        "refs": "J2"
+      }
+    ]
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T21:40:56.354407+00:00",
+  "inputs": {
+    "approval_contract": {
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "input:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+      "requires": {},
+      "terms": "cad1f14de18e13bdc3994e96f5f25015afc808d2c13575d38ba2aef5d3895255"
+    },
+    "approval_history_seq": 26,
+    "board/exports/rj45_breakout-bom.csv": "f4091d2ff38ffe4a438c134298ec93f1f422c4b35b84a79730887f50e4b5501a",
+    "board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "tools/board_graph.json": "ad0942fb15308e24d20b017393c1676a49fa6e4714c3b462b8af69d10dfb14d5",
+    "tools/board_graph_tool.json": "078c7019ff6f5143d88289e3220e69e7e35b318ae6323350963536ab89d3f480"
+  },
+  "node": "bom",
+  "outcome": "pass",
+  "run_id": "da1febfaefda4d9baa42c662b0188e50",
+  "started_at": "2026-11-25T21:40:55.955909+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "parts": {
+    "J1": {
+      "x": 18.0,
+      "y": 6.475,
+      "rotation": 180.0,
+      "side": "front"
+    },
+    "J2": {
+      "x": 18.0,
+      "y": 25.0,
+      "rotation": 0.0,
+      "side": "front"
+    },
+    "H1": {
+      "x": 3.5,
+      "y": 3.5,
+      "rotation": 0.0,
+      "side": "front"
+    },
+    "H2": {
+      "x": 32.5,
+      "y": 3.5,
+      "rotation": 0.0,
+      "side": "front"
+    },
+    "H3": {
+      "x": 3.5,
+      "y": 31.5,
+      "rotation": 0.0,
+      "side": "front"
+    },
+    "H4": {
+      "x": 32.5,
+      "y": 31.5,
+      "rotation": 0.0,
+      "side": "front"
+    }
+  }
+}

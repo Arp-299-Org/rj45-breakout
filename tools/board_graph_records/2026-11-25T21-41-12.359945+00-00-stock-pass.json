@@ -1,0 +1,33 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:41:12.359945+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/stock/listings.json",
+      "sha256": "ae4eea23eb7d6959bfb4ebaec1e04d35ebcebc5c9be8ba1696127512aa3e8226"
+    },
+    {
+      "path": "board/reports/stock/supply_receipt.json",
+      "sha256": "003009bde8fcd4ab4abe54bfa1135207812d2c7f754eb2811ffb59aa9a5f85f2"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 27,
+    "approval_v1": {
+      "card terms": "01ad04399f45a5d1bc77ca3a8a7db8fd9b144c7e6eb50525627319c541d9b38e",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "review:bom": "2026-11-25T21:40:56.741654+00:00"
+    },
+    "attempt_id": "b079a5bbbc404c9d803b5312efe2c954",
+    "workflow_parent": {
+      "name": "2026-11-25T21-40-56.741654+00-00-bom-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "stock",
+  "note": "Supply receipt 0 findings against current 2026-11-25 JLCPCB/LCSC listings for C501473 and C42453975.",
+  "outcome": "pass",
+  "target": "datasheets",
+  "track": "board"
+}

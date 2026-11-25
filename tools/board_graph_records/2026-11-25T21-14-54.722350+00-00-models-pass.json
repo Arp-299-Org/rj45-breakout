@@ -1,0 +1,30 @@
+{
+  "actor": "script:models",
+  "at": "2026-11-25T21:14:54.722350+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/models/models.json",
+      "sha256": "c1ca0b6cf2e3c795c1dee303f248f2921277529519b3965f4c3625300a332c6d"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 19,
+    "approval_v1": {
+      "card terms": "07df197ab4afab23a5fa70863df101905f6abd1c4caf886c7b71b63cbbecc6c8",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "owned:board/models": {
+        "sha256": "49d9d22a6a29a3c40c8da2e30f478923601d7e95d645e0cba5a2fd3d670bd924"
+      }
+    },
+    "board/models": "49d9d22a6a29a3c40c8da2e30f478923601d7e95d645e0cba5a2fd3d670bd924",
+    "workflow_parent": {
+      "name": "2026-11-25T21-14-42.513255+00-00-datasheets-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "models",
+  "note": "no findings",
+  "outcome": "pass",
+  "target": "footprints",
+  "track": "board"
+}

@@ -1,0 +1,99 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:42:47.117556+00:00",
+  "evidence": [
+    {
+      "path": "tasks/run-157997c4.jsonl",
+      "sha256": "6b9efab6d7dd3759b6560a0c693852d468427f36aa77140852cf391579abc88c"
+    },
+    {
+      "path": "board/reports/routing_batch/checks/drc.json",
+      "sha256": "e7fd60b52c0264efafe5dca189b47481df09b5a2d3b9217900aa3ef71e74299a"
+    },
+    {
+      "path": "board/reports/routing_batch/checks/route-quality.json",
+      "sha256": "92180019ac58b664957bcb62aa49abbb0297c66664553e0e4fee021bd4f69f6c"
+    },
+    {
+      "path": "board/reports/routing_batch/copper-diff.json",
+      "sha256": "abd79fa308adfb50227b2a65ef8d8452db0519e912555985e83fde535d326139"
+    },
+    {
+      "path": "board/reports/routing_batch/track-craft.json",
+      "sha256": "79e46ae3501aa02e27d8a919d1f0d397632ff658109335e454f4d311236b1487"
+    },
+    {
+      "path": "board/reports/routing_batch/render/board-render.json",
+      "sha256": "9412560e8135838f7f53b090fb1a00dd29da382843c1d94535615791fe305521"
+    },
+    {
+      "path": "board/reports/routing_batch/render/front_copper.png",
+      "sha256": "5778c4773a5494a7697a102af83318a0e364db2f963954b2e1a750b84939ad0e"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 32,
+    "approval_v1": {
+      "card terms": "07fee0e0304250801ec238aece8317cbee2a7bc1b502f23557e212e674d888ba",
+      "file:.agents/skills/kicad-10-operator/SKILL.md": "58dfc8ba96237ff5faaee73bc96e2273bdf20b3f000d0cea63b94aba20768040",
+      "file:AGENTS.md": "fd712902911a217376819a94110ca38a7f6c6e360fbefffee5d879c946245d1b",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:board/ELECTRICAL_AUDIT_CONTRACT.md": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e",
+      "file:board/SPACE.md": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30",
+      "file:docs/BOARD_EVIDENCE.md": "386390a77d7905f7aff82c3402694cc0fcc45660110c9da5a51d8e692858fbd1",
+      "file:docs/BOARD_REVIEW.md": "2f938712cba3572dddd1df5c5ee0b19d26a2e9d12a8fccbeb217d09043212f19",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "file:docs/ROUTING_NOTES.md": "229cb808c39f83c9effd4f53f5e3bb314717e75b7bf6750795747a68dfc72d48",
+      "review:placement": "2026-11-25T21:17:42.041848+00:00",
+      "source:routing_constraints": {
+        "board/rj45_breakout.kicad_dru": "1a589c3c3907947bc2016ba0aa7ec9081c6e875b4144cad67b809efabad94768",
+        "board/rj45_breakout.kicad_pro": "b2e5b89686d3de8dd1835fe29411b9580b7482cb0c6e01791e5fc16418d7b189"
+      },
+      "view:copper": "afe68f303c5b44d142f0446329988a1a36ce124d487e7ce48290fccb44b7ffbf"
+    },
+    "attempt_id": "9cd9bd40643944dfb30bd9c1f9dff8e2",
+    "board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+    "routing_terms": {
+      "card": {
+        "action": "routing_run",
+        "docs": [
+          "docs/ROUTING_NOTES.md",
+          "board/SPACE.md",
+          "board/DECISIONS.md",
+          "board/ELECTRICAL_AUDIT_CONTRACT.md",
+          ".agents/skills/kicad-10-operator/SKILL.md",
+          "docs/BOARD_REVIEW.md",
+          "docs/BOARD_EVIDENCE.md"
+        ],
+        "pass_when": "All intended connections are routed; saved-state connectivity, return paths and relevant checks inspected on the current revision.",
+        "requires": null,
+        "task": "Start from the latest incoming graph record and its evidence to define this visit. On a review return, first inspect its findings without editing copper: separate accepted geometry and checker artifacts, repair checker defects, and bring conflicting rules or owner tradeoffs to the owner with a recommendation and cost. Define the next bounded copper batch and plan each task file's `Mode:` (`ipc` for clean channels/buses, `hybrid` default for mixed runs, `interactive` for dense Push-and-Shove) only after those dispositions and owner authorization. Work in the KiCad machine's editor. Commit task files with the named connections and `Mode:`. Use the Tool command in this brief. It runs the locked KiCad editor, verifies the saved board and records the result. Before a copper batch, its nets must be clear of open issues. That run is the only way copper is laid: never write tracks, vias or pours with ad-hoc scripts (`wrapper_calls`), raw `create_items` outside `kicad_lay.py`, direct `.kicad_pcb` edits, or an unauthorized router, and never lay copper by hand outside the run. When the run cannot lay a connection, record needs_lead with what the tool returned and stop; the card refuses pass and more_work while the board holds copper that no run committed. Refill zones and save. Run the copper diff against origin/main with the batch nets, declaring each change to earlier copper or part positions as a fix with its reason. Render and inspect the pictures. Run fresh saved-fill, DRC/parity, route-quality, electrical, pad-mask, thermal-relief, hand-solder-joint and exhaustive checks and the relevant track-craft checks. Resolve or explain each finding and obtain the targeted board critic. Record more_work with the batch nets until the whole board is routed. Preserve accepted placements, labels and waivers unless the owner changes that decision."
+      },
+      "docs": {
+        ".agents/skills/kicad-10-operator/SKILL.md": "58dfc8ba96237ff5faaee73bc96e2273bdf20b3f000d0cea63b94aba20768040",
+        "AGENTS.md": "fd712902911a217376819a94110ca38a7f6c6e360fbefffee5d879c946245d1b",
+        "board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+        "board/ELECTRICAL_AUDIT_CONTRACT.md": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e",
+        "board/SPACE.md": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30",
+        "docs/BOARD_EVIDENCE.md": null,
+        "docs/BOARD_REVIEW.md": "2f938712cba3572dddd1df5c5ee0b19d26a2e9d12a8fccbeb217d09043212f19",
+        "docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+        "docs/ROUTING_NOTES.md": "229cb808c39f83c9effd4f53f5e3bb314717e75b7bf6750795747a68dfc72d48"
+      },
+      "routing_constraints": {
+        "board/rj45_breakout.kicad_dru": "1a589c3c3907947bc2016ba0aa7ec9081c6e875b4144cad67b809efabad94768",
+        "board/rj45_breakout.kicad_pro": "b2e5b89686d3de8dd1835fe29411b9580b7482cb0c6e01791e5fc16418d7b189"
+      }
+    },
+    "view:copper_and_silk": "7c26e660eae2f49ce3079a98ff0e452f6d5e65968e9cca70e94a749404dc7fcc",
+    "workflow_parent": {
+      "name": "2026-11-25T21-42-11.904844+00-00-placement-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "routing_batch",
+  "note": "All 8 nets /RJ45_1../RJ45_8 routed on F.Cu in KiCad 10 run-157997c4 (Mode: ipc); DRC/parity 0 violations, route-quality 0 errors/warnings, track-craft 0 failing/0 inspect, centered pad exits verified.",
+  "outcome": "pass",
+  "target": "board_checks",
+  "track": "board"
+}

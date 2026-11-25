@@ -1,0 +1,11 @@
+{
+  "schema": "rt1-kicad-route-quality/v1",
+  "summary": {
+    "tracks": 24,
+    "arcs": 0,
+    "vias": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "findings": []
+}

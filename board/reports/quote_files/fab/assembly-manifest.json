@@ -1,0 +1,43 @@
+{
+  "board": "board/rj45_breakout.kicad_pcb",
+  "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+  "validated_file_sha256": {
+    "RJ45_BREAKOUT_bom.csv": "9BFD3EC9C117C45211FEF2E24A3809319160A612589BEB781E05CDF3204144D9",
+    "RJ45_BREAKOUT_positions.csv": "0B2D69FF5DB5DF05A25C6B18C33953BD85C5AA25FE6D1425CCF0164C90B420B7",
+    "RJ45_BREAKOUT_SMT_bom.csv": "9BFD3EC9C117C45211FEF2E24A3809319160A612589BEB781E05CDF3204144D9",
+    "RJ45_BREAKOUT_SMT_positions.csv": "0B2D69FF5DB5DF05A25C6B18C33953BD85C5AA25FE6D1425CCF0164C90B420B7",
+    "RJ45_BREAKOUT.zip": "4331038FCA3BC901FBCBCF02FF73BC75A4C306E4D3CA07EE922D2F3501E664B9"
+  },
+  "smt_component_count": 2,
+  "manual_through_hole_component_count": 0,
+  "manual_through_hole_references": [],
+  "owner_manual_through_hole_on_smt": [],
+  "production_dnp": [],
+  "smt_bom": "RJ45_BREAKOUT_SMT_bom.csv",
+  "smt_positions": "RJ45_BREAKOUT_SMT_positions.csv",
+  "all_smt_parts_have_lcsc_numbers": true,
+  "bom_cpl_reference_sets_match": true,
+  "placement_coordinates_match_board_absolute_origin": true,
+  "placement_rotation_convention": "JLCPCB CPL: front side KiCad angle, back side mirrored (180 - KiCad angle); positive counter-clockwise; checked in JLCPCB's placement viewer 2026-09-25",
+  "fabrication_archive": "RJ45_BREAKOUT.zip",
+  "fabrication_archive_required_layers_present": true,
+  "copper_layers": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "extra_fabrication_layers": [],
+  "grouped_functional_labels": {},
+  "paste_flash_counts": {
+    "top": 18,
+    "bottom": 0
+  },
+  "paste_region_counts": {
+    "top": 0,
+    "bottom": 0
+  },
+  "paste_graphic_items": {
+    "top": {},
+    "bottom": {}
+  },
+  "paste_validation_scope": "Pad flash counts checked here; packager also compares every complete exported fabrication layer, including all paste polygon regions."
+}

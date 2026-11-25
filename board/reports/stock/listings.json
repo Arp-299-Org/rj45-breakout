@@ -1,0 +1,23 @@
+{
+  "planning_quantity": 5,
+  "factory_parts": [
+    {
+      "part": "C501473",
+      "read_at": "2026-11-25T19:46:00Z",
+      "listed_manufacturer": "Heling",
+      "listed_mpn": "MJ56881-B011-HLRN1-C",
+      "class": "Extended",
+      "stock": 3248,
+      "unit_price_usd": 0.5807
+    },
+    {
+      "part": "C42453975",
+      "read_at": "2026-11-25T19:46:00Z",
+      "listed_manufacturer": "hanxia",
+      "listed_mpn": "HX PZ2.54-1x8P TP-ZQ",
+      "class": "Extended",
+      "stock": 1740,
+      "unit_price_usd": 0.0959
+    }
+  ]
+}

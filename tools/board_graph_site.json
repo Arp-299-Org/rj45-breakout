@@ -1,0 +1,4 @@
+{
+  "one_machine": true,
+  "state_database": "logs/board-graph/state.sqlite3"
+}

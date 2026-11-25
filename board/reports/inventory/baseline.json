@@ -1,0 +1,51 @@
+{
+  "action": "baseline",
+  "detail": {
+    "board": null,
+    "check": "saved files read cleanly",
+    "not_yet": [
+      {
+        "file": "board/rj45_breakout.kicad_pcb",
+        "what": "the board, which the first update from the schematic makes"
+      },
+      {
+        "file": "board/rj45_breakout.kicad_dru",
+        "what": "the board's rules file"
+      },
+      {
+        "file": "board/exports/rj45_breakout-bom.csv",
+        "what": "the exported BOM, which the first BOM export from the schematic writes"
+      }
+    ],
+    "notes": [
+      "schematic stage: there is no board file yet",
+      "not there yet: board/rj45_breakout.kicad_pcb (the board, which the first update from the schematic makes); board/rj45_breakout.kicad_dru (the board's rules file); board/exports/rj45_breakout-bom.csv (the exported BOM, which the first BOM export from the schematic writes). The cards that read them refuse until they are there"
+    ],
+    "read": {
+      "board/rj45_breakout.kicad_pro": "34ff5752d652a320fdf7ca0b96349453a1d89e5f0a3c11b58fea808171ac5a43",
+      "board/rj45_breakout.kicad_sch": "24afd0881c26603b33c559faa0c282baac0041b334e308d4386e2ac562c3b727"
+    },
+    "scope": "Inventory only: the files parse and are counted. Not ERC, DRC or hardware performance.",
+    "stage": "schematic"
+  },
+  "findings": [],
+  "finished_at": "2026-11-25T19:41:53.626820+00:00",
+  "inputs": {
+    "approval_contract": {
+      "file:docs/PRODUCT_TRUTH.md": "7e6de9ba63044dab39b60af0640c469cfa200a53abbad500088b0520743631ac",
+      "requires": {},
+      "terms": "158c20d615ec1c94a044ec38a31cc4bd7aef5d1b768ec2d506e4a4bd8b92d8f1"
+    },
+    "approval_history_seq": 0,
+    "board/exports/rj45_breakout-bom.csv": null,
+    "board/rj45_breakout.kicad_dru": null,
+    "board/rj45_breakout.kicad_pcb": null,
+    "board/rj45_breakout.kicad_pro": "34ff5752d652a320fdf7ca0b96349453a1d89e5f0a3c11b58fea808171ac5a43",
+    "board/rj45_breakout.kicad_sch": "24afd0881c26603b33c559faa0c282baac0041b334e308d4386e2ac562c3b727",
+    "tools/board_graph_tool.json": "b6f4e8cc6f51a0293b4627661a9cdc5664a067a619859ee943dd11bf6bbf5fad"
+  },
+  "node": "inventory",
+  "outcome": "pass",
+  "run_id": "e12704949d4f436eab576c2cc63a4b9f",
+  "started_at": "2026-11-25T19:41:53.303533+00:00"
+}

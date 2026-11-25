@@ -1,0 +1,22 @@
+{
+ "board": "rj45_breakout.kicad_pcb",
+ "tolerance": {
+  "plus_mm": 0.13,
+  "minus_mm": 0.08,
+  "source": "JLCPCB capabilities page, plated hole finished size +0.13 / -0.08 mm, read 2026-11-11"
+ },
+ "recommended_clearance": null,
+ "recommended_clearance_note": "The repository records no recommended pin-to-hole clearance. The maker's recommended hole is printed where its datasheet gives one",
+ "rules_note": null,
+ "counts": {
+  "rows": 0,
+  "does_not_fit": 0,
+  "not_proven": 0,
+  "as_the_maker_draws_it": 0,
+  "not_fitted": 0,
+  "mask_missing": 0,
+  "solid": 0
+ },
+ "rows": [],
+ "pass": true
+}

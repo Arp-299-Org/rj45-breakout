@@ -1,0 +1,64 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:50:50.322779+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/verification/independent-review.json",
+      "sha256": "5c6b1f593136fd578d2222a891f911a643306bffc3863a0b55aad38a2be751c4"
+    },
+    {
+      "path": "board/reports/verification/reproduced.md",
+      "sha256": "ca3f95466a289ed78258197b9012f36b41507a769cc9dc3422313a636cba0290"
+    },
+    {
+      "path": "board/reports/verification/checks/provenance.json",
+      "sha256": "77dfd25ed523eca27ae44fb53229be2d199f13324a35d7c77a6699d097c5d642"
+    },
+    {
+      "path": "board/reports/verification/checks/erc.json",
+      "sha256": "f06f4682b7df62a9d48035ae9b70e1dab9b896720c0d88c4237bac3f1f7ca0b7"
+    },
+    {
+      "path": "board/reports/verification/checks/drc.json",
+      "sha256": "9e4691421d55b67f0322c1c708a9248b1a205153a8ca717eb76ecbcb80809701"
+    },
+    {
+      "path": "board/reports/verification/checks/route-quality.json",
+      "sha256": "92180019ac58b664957bcb62aa49abbb0297c66664553e0e4fee021bd4f69f6c"
+    },
+    {
+      "path": "board/reports/verification/checks/pad-mask.json",
+      "sha256": "697b0d09be2086dc1d5a13187e0c45e219eb981108b327692aa7df69b37fb898"
+    },
+    {
+      "path": "board/reports/provenance.json",
+      "sha256": "3747d4849502a40acab0138f52369248cafab16699317f60c95d2a222795b276"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 35,
+    "approval_v1": {
+      "card terms": "a3373476840d8ef327249c2b8ead6f4d06c3b85c0d8c8f9e63eb94a021c3b7b2",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:board/ELECTRICAL_AUDIT_CONTRACT.md": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e",
+      "file:board/ORDER_PACKAGE_CONTRACT.md": "dd349211c9ceabde689c6de46d435a1dd8b39db0964c85058c0d7165a8c0b6db",
+      "file:board/rj45_breakout.kicad_pcb": "67f2c14f021f772807f157ba457641d184f63f9d35f16024a6f6077f364c80b3",
+      "file:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+      "file:docs/BOARD_EVIDENCE.md": "386390a77d7905f7aff82c3402694cc0fcc45660110c9da5a51d8e692858fbd1",
+      "file:docs/BOARD_ORDER_COMMON_SENSE_CHECKLIST.md": "55b3b80c8f5397e6678129cf565deffda9c9fcc14ab62709f0a46017eb4cf447",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "review:schematic": "2026-11-25T21:40:44.160806+00:00",
+      "review:visual_review": "2026-11-25T21:47:14.030889+00:00"
+    },
+    "attempt_id": "7d2d65a9049c447faf496732ad7138bb",
+    "workflow_parent": {
+      "name": "2026-11-25T21-47-14.030889+00-00-visual_review-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "verification",
+  "note": "Verification PASS: all checks freshly stamped against routed PCB, independent reviewer reproduced ERC/DRC/connectivity/clearances/BOM from source files.",
+  "outcome": "pass",
+  "target": "quote_files",
+  "track": "board"
+}

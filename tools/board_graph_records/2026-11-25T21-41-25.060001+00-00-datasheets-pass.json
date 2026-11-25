@@ -1,0 +1,34 @@
+{
+  "actor": "script:datasheets",
+  "at": "2026-11-25T21:41:25.060001+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/datasheets/datasheets.json",
+      "sha256": "004276f6540c0bd33d14f8a87f3f96eba629f0dbfe5e2dc3a6396367a2298b71"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 28,
+    "approval_v1": {
+      "card terms": "48ffe34ae3686933a9f55bf0492c65a049d0647bf5838cd685fcae5cfe347fdd",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "owned:hardware/reference": {
+        "sha256": "551533fab661ed9a8dd67cdc0e69f5916670d1a82e393c75c2e1cf148f274ab7"
+      },
+      "owned:hardware/reference/parts.json": {
+        "sha256": "049c49a73a9c0c54c6607138913e6500df214966209116d6b64ab979c2a492f0"
+      }
+    },
+    "hardware/reference": "551533fab661ed9a8dd67cdc0e69f5916670d1a82e393c75c2e1cf148f274ab7",
+    "hardware/reference/parts.json": "049c49a73a9c0c54c6607138913e6500df214966209116d6b64ab979c2a492f0",
+    "workflow_parent": {
+      "name": "2026-11-25T21-41-12.359945+00-00-stock-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "datasheets",
+  "note": "no findings",
+  "outcome": "pass",
+  "target": "models",
+  "track": "board"
+}

@@ -1,0 +1,30 @@
+{
+  "actor": "script:bom",
+  "at": "2026-11-25T21:14:05.226543+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/bom/bom.json",
+      "sha256": "8c0d791b5db9b3bf9e676fdb6a115be2b66c7ab28c219d9fd6bd0b89e5837f0a"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 16,
+    "approval_v1": {
+      "card terms": "cad1f14de18e13bdc3994e96f5f25015afc808d2c13575d38ba2aef5d3895255",
+      "file:board/exports/rj45_breakout-bom.csv": "f4091d2ff38ffe4a438c134298ec93f1f422c4b35b84a79730887f50e4b5501a",
+      "file:board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "view:purchasing": "d9592191fe92f747080dbeaffebb3ce68e612749377db5240e077a8d758d6c22"
+    },
+    "board/exports/rj45_breakout-bom.csv": "f4091d2ff38ffe4a438c134298ec93f1f422c4b35b84a79730887f50e4b5501a",
+    "workflow_parent": {
+      "name": "2026-11-25T21-13-52.560213+00-00-schematic-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "bom",
+  "note": "no findings",
+  "outcome": "pass",
+  "target": "stock",
+  "track": "board"
+}

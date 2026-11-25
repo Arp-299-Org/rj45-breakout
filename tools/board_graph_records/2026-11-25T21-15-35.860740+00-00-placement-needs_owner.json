@@ -1,0 +1,70 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:15:35.860740+00:00",
+  "evidence": [
+    {
+      "path": "board/reports/placement/placement.json",
+      "sha256": "a08289db094713acf76c0b7d1fc8051ce552b0a966bf64ea2a3f2e020106f51c"
+    },
+    {
+      "path": "board/reports/placement/render/board-render.json",
+      "sha256": "d7335300a4010f9962c6f9ec29bd141f2017e4dc4ba09df5eb1f920d9750c8a0"
+    },
+    {
+      "path": "board/reports/placement/render/3d_top.png",
+      "sha256": "2b373b9a71479ce6c21103a2e338e56016fb1d9648fdcb86b0a81b2f5e1fae75"
+    },
+    {
+      "path": "board/reports/placement/render/3d_bottom.png",
+      "sha256": "8c807177f3822877fac31d12713f1f8f82e7c536ddb5a3ca5c5c67ea0b09780d"
+    },
+    {
+      "path": "board/reports/placement/render/front_silk_and_mask.png",
+      "sha256": "c57e3f1d7d5f574e3de9d0e400213559095747145e2060e3496336e97e668de3"
+    },
+    {
+      "path": "board/reports/placement/render/back_silk_and_mask.png",
+      "sha256": "133048a389e58b4f9f67f0c046a4cab84e910c43d3fc4c74e1969d1c7ec71e7c"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 21,
+    "attempt_id": "c8ea326f9f764426b96f75894905d3e3",
+    "board/owner_placement.json": "8df3e8bd69d38ebd8d8d96d51b384b44a22e55455d9c588ce4cd2327ccb430d9",
+    "presentation": {
+      "board_sha256": "afe1f0ed78b3c9deb856cadc7469778d13da96ce364e20a8cf0313a22b3fef9f",
+      "files": {
+        "board/reports/placement/render/3d_bottom.png": "8c807177f3822877fac31d12713f1f8f82e7c536ddb5a3ca5c5c67ea0b09780d",
+        "board/reports/placement/render/3d_top.png": "2b373b9a71479ce6c21103a2e338e56016fb1d9648fdcb86b0a81b2f5e1fae75",
+        "board/reports/placement/render/back_silk_and_mask.png": "133048a389e58b4f9f67f0c046a4cab84e910c43d3fc4c74e1969d1c7ec71e7c",
+        "board/reports/placement/render/board-render.json": "d7335300a4010f9962c6f9ec29bd141f2017e4dc4ba09df5eb1f920d9750c8a0",
+        "board/reports/placement/render/front_silk_and_mask.png": "c57e3f1d7d5f574e3de9d0e400213559095747145e2060e3496336e97e668de3"
+      },
+      "kind": "board_render",
+      "scope": {
+        "card terms": "7b6ed88f2afa185d5ee40f400c4771641395ca022914811264afd28e4cdd7323",
+        "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+        "file:board/SPACE.md": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30",
+        "file:board/owner_placement.json": "8df3e8bd69d38ebd8d8d96d51b384b44a22e55455d9c588ce4cd2327ccb430d9",
+        "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+        "source:render_models": {
+          "models": {
+            "${KIPRJMOD}/models/Hanxia_HX_PZ2.54-1x8P_TP-ZQ.step": "a1fc91b83a419fbd56290fe846045fe15720dbde7678c7e9c8e3c5ddf25c4f81",
+            "${KIPRJMOD}/models/Heling_MJ56881-B011-HLRN1-C.step": "31681193ca2051e0425524304a944c0a966d57e4d605c96af0c33169d8b50fbe"
+          }
+        },
+        "view:placement": "fd382e1d5b787773aae2edec3e042ab6d42a9f951d5b7a833099081864a01557"
+      }
+    },
+    "view:placement": "fd382e1d5b787773aae2edec3e042ab6d42a9f951d5b7a833099081864a01557",
+    "workflow_parent": {
+      "name": "2026-11-25T21-15-08.389642+00-00-footprints-pass.json",
+      "scope": "track"
+    }
+  },
+  "node": "placement",
+  "note": "Placement matches board/owner_placement.json with 0 findings on unchanged board/renders; re-presenting unchanged 2D/3D renders under board-graph v0.32.2 canonical placement_view so owner can confirm and stamp placement hash.",
+  "outcome": "needs_owner",
+  "target": "placement",
+  "track": "board"
+}

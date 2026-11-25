@@ -1,0 +1,9 @@
+{
+  "documented-drc-exclusions.json": {
+    "board": "rj45_breakout.kicad_pcb",
+    "board_sha256": "67F2C14F021F772807F157BA457641D184F63F9D35F16024A6F6077F364C80B3",
+    "generated_utc": "2026-11-25T21:48:27+00:00",
+    "generator": "documented-drc-exclusions.json (0 DRC warnings)",
+    "schematic_sha256": "382AD3643B8DEF54011743686315E7B443F7E680B439D52C7BAB0D5F6D4AC718"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:13:25.292311+00:00",
+  "evidence": [
+    {
+      "path": "board/ELECTRICAL_AUDIT_CONTRACT.md",
+      "sha256": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e"
+    },
+    {
+      "path": "board/SPACE.md",
+      "sha256": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30"
+    }
+  ],
+  "inputs": {
+    "approval_history_seq": 14,
+    "approval_v1": {
+      "card terms": "288c3a767000286b7da2af6871a21c44915532cc085a0b840580f081593d52be",
+      "file:board/DECISIONS.md": "39f1f864c34d154adf9260259ff67e8606b8487f0f391d7b11afa99091860514",
+      "file:board/ELECTRICAL_AUDIT_CONTRACT.md": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e",
+      "file:board/SPACE.md": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30",
+      "file:docs/PRODUCT_TRUTH.md": "fdb8272c7b3a2228cd1f866ae4ad12fbf39d162d5b87d254ac9d94e4632e2bfe",
+      "owned:board/ELECTRICAL_AUDIT_CONTRACT.md": {
+        "sha256": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e"
+      },
+      "review:decisions": "2026-11-25T19:42:29.074873+00:00"
+    },
+    "attempt_id": "06a7bdc0b3984ffd9d2ec3ee7c29fa2d",
+    "board/ELECTRICAL_AUDIT_CONTRACT.md": "3dd6d37bd6fce689f87a857b64cbbf1c1ed5d0fedffb3956781ba7a572b8691e",
+    "workflow_parent": {
+      "name": "2026-11-25T21-12-59.056775+00-00-schematic-returned.json",
+      "scope": "track"
+    }
+  },
+  "node": "constraints",
+  "note": "Verified electrical contract remains current against finalized board/SPACE.md (36.0 x 35.0 mm, 0.25 mm tracks, 0.20 mm clearance, planar F.Cu, Mode: ipc).",
+  "outcome": "pass",
+  "target": "schematic",
+  "track": "board"
+}

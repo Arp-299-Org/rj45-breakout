@@ -1,0 +1,26 @@
+{
+  "actor": "agent:gemini",
+  "at": "2026-11-25T21:12:59.056775+00:00",
+  "evidence": [
+    {
+      "path": "board/SPACE.md",
+      "sha256": "942ec335c129938ce63076add1646755bdeef27fe7f1038b57d4e4b9dca88f30"
+    }
+  ],
+  "inputs": {
+    "board/rj45_breakout.kicad_dru": "1a589c3c3907947bc2016ba0aa7ec9081c6e875b4144cad67b809efabad94768",
+    "board/rj45_breakout.kicad_pro": "a2d6f0cf5fbeaf8bf9dc29c9113465e94e1e042adcde4e826b5e6695d16a5d90",
+    "board/rj45_breakout.kicad_sch": "382ad3643b8def54011743686315e7b443f7e680b439d52c7bab0d5f6d4ac718",
+    "board/rj45_breakout.kicad_sym": "9a145d34500c537eb63421ef853bfd2c0bf144e85fd0ac0f81314cebbe6d9250",
+    "board/sym-lib-table": "f2ad9c82391520dd59aae7e17d3e6eb2e29b1c7df97cda4c526875abd778a41d",
+    "workflow_parent": {
+      "name": "2026-11-25T21-12-47.321847+00-00-routing_batch-returned.json",
+      "scope": "track"
+    }
+  },
+  "node": "schematic",
+  "note": "Return to constraints so board/ELECTRICAL_AUDIT_CONTRACT.md is re-approved against finalized board/SPACE.md.",
+  "outcome": "returned",
+  "target": "constraints",
+  "track": "board"
+}

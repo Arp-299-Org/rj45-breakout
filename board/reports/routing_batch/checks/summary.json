@@ -1,0 +1,72 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "check": "Schematic rules check, ERC (G1)",
+      "ok": true,
+      "detail": "0 errors, 0 warnings",
+      "report": "erc.json"
+    },
+    {
+      "check": "KiCad version",
+      "ok": true,
+      "detail": "KiCad 10.0.8 (the preflight enforces the minimum)",
+      "report": null
+    },
+    {
+      "check": "Board rules check, DRC (G2), zones refilled",
+      "ok": true,
+      "detail": "0 copper violations, 0 mismatches, 0 library warnings",
+      "report": "drc.json",
+      "open": 0
+    },
+    {
+      "check": "Saved zone fills current",
+      "ok": true,
+      "detail": "all 0 zones match a fresh refill",
+      "report": "drc-refilled-copy.json"
+    },
+    {
+      "check": "Route quality (G3)",
+      "ok": true,
+      "detail": "0 errors, 0 warnings (24 tracks, 0 vias)",
+      "report": "route-quality.json"
+    },
+    {
+      "check": "Electrical audit (G4)",
+      "ok": true,
+      "detail": "skipped: this board's description names no electrical audit",
+      "report": null
+    },
+    {
+      "check": "Hand-solder pads have mask openings (G5)",
+      "ok": true,
+      "detail": "0 covered pads",
+      "report": "pad-mask.json"
+    },
+    {
+      "check": "Through-hole pads join planes by thermal spokes",
+      "ok": true,
+      "detail": "0 of 0 through-hole pads on a plane joined solid",
+      "report": "thermal-relief.json"
+    },
+    {
+      "check": "Hand-soldered joints: pins fit, lands open, no solid plane",
+      "ok": true,
+      "detail": "0 joint kinds: 0 do not fit, 0 without mask, 0 solid; 0 not proven; 0 as the maker draws it, 0 not fitted",
+      "report": "manual-joints.json"
+    },
+    {
+      "check": "Full board audit (G6)",
+      "ok": true,
+      "detail": "skipped: this board's description names no full board audit",
+      "report": null
+    },
+    {
+      "check": "Routing progress",
+      "ok": true,
+      "detail": "none open",
+      "report": null
+    }
+  ]
+}
